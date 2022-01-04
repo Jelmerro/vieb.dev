@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- This page and my own icons are CC BY-SA 4.0 licensed @ Jelmer van Arnhem, -->
+    <!-- see ./LICENSE or https://creativecommons.org/licenses/by-sa/4.0/ -->
+    <!-- Vieb and the Vieb logo are GPL-3.0+ licensed @ Jelmer van Arnhem, -->
+    <!-- see ./LICENSE.GPL-3.0-or-later or http://gnu.org/licenses/gpl.html -->
+    <!-- The brand logos, screenshots and github badges are public domain via CC0 1.0, -->
+    <!-- see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/ -->
+    <head>
+        <!-- Content tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev; object-src 'none'; style-src 'unsafe-inline' vieb.dev; script-src vieb.dev; default-src 'none'">
+        <!-- Information -->
+        <meta name="description" content="Homepage of the Vim Inspired Electron Browser: Vieb">
+        <meta name="author" content="Jelmerro">
+        <title>Vieb - Screenshots</title>
+        <!-- Links -->
+        <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+        <link rel="shortcut icon" type="image/svg+xml" href="img/icon.svg">
+        <link rel="stylesheet" href="style.css" type="text/css" media="all">
+        <script src="index.js"></script>
+    </head>
+    <body lang="en">
+        <nav>
+            <a class="logo" href="/"><img src="img/icon.svg"><span>Vieb</span></a>
+            <a href="/features">Features</a>
+            <a class="current" href="/screenshots">Screenshots</a>
+            <a href="/cheatsheet">Cheatsheet</a>
+            <a href="/download">Downloads</a>
+            <div class="spacer"></div>
+            <img id="toggle-theme" src="img/brightness.png">
+        </nav>
+        <main class="screenshots">
+            <a href="img/1.png"><img src="img/1.png"></a>
+            <a href="img/2.png"><img src="img/2.png"></a>
+            <a href="img/3.png"><img src="img/3.png"></a>
+            <a href="img/4.png"><img src="img/4.png"></a>
+            <a href="img/5.png"><img src="img/5.png"></a>
+            <a href="img/6.png"><img src="img/6.png"></a>
+            <a href="img/7.png"><img src="img/7.png"></a>
+            <a href="img/8.png"><img src="img/8.png"></a>
+        </main>
+        <footer>
+            <div>
+                <span>Created by</span>
+                <a href="https://jelmerro.nl" target="_blank">
+                    <img src="img/jelmerro.jpg"><span>Jelmer van Arnhem</span>
+                </a>
+                <span>on</span>
+                <a href="https://github.com/Jelmerro/Vieb" target="_blank">
+                    <img src="img/github.svg"><span>Github</span>
+                </a>
+                <span>and supported on</span>
+                <a href="https://ko-fi.com/Jelmerro" target="_blank">
+                    <img src="img/ko-fi.svg"><span>Ko-fi</span>
+                </a>
+                <span>and</span>
+                <a href="https://github.com/sponsors/Jelmerro" target="_blank">
+                    <img src="img/github.svg"><span>Github</span>
+                </a>
+            </div>
+    </body>
+</html>

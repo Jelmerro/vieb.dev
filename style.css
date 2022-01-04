@@ -1,0 +1,79 @@
+/*
+This page and my own icons are CC BY-SA 4.0 licensed @ Jelmer van Arnhem,
+see ./LICENSE or https://creativecommons.org/licenses/by-sa/4.0/
+Vieb and the Vieb logo are GPL-3.0+ licensed @ Jelmer van Arnhem,
+see ./LICENSE.GPL-3.0-or-later or http://gnu.org/licenses/gpl.html
+The brand logos, screenshots and github badges are public domain via CC0 1.0,
+see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/
+*/
+/* colors */
+:root {
+    --text: #fff;
+    --background: #333;
+    --subtext: #aaa;
+    --link: #0cf;
+    --menu-background: #222;
+    --menu-selected: #f02;
+    --code-background: #111;
+    --img-border: #000;
+    --button-text: #fff;
+    --button-primary: #a01;
+    --button-secondary: #555;
+    --button-accents: #ccc;
+}
+/* general */
+body {font: 14px "DejaVu Sans Mono", "Courier", monospace;text-align: center;background-color: var(--background);color: var(--text);line-height: 1.2;display: flex;margin: 0;min-height: 100vh;user-select: none;}
+main {padding: 5em 0;margin: auto;display: flex;flex-direction: column;}
+h1 {font-size: 2.5em;margin: .5em 0 0 0;}
+h2 {font-size: 1.8em;height: 1em;padding: 1em 0;margin: 0;}
+h3, h4, h5 {margin: 0;color: var(--subtext);}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.1em;}
+h5 {font-size: .8em;}
+ul {padding: 1.5em 0;}
+b {font-size: 1.2em;line-height: 1;}
+nav {position: fixed;top: 0;left: 0;width: 100%;background-color: var(--menu-background);z-index: 2;}
+nav, nav * {display: flex;margin: auto 0;}
+nav .spacer {flex: 1;}
+#toggle-theme {height: 2em;padding: 1.5em;cursor: pointer;}
+#toggle-theme:hover {filter: invert(.5);}
+.logo img {height: 4em;width: 4em;margin-left: 1em;}
+.logo span {margin: auto .5em auto .5em;font-size: 2em;}
+nav a {color: var(--text);margin: 0;align-items: center;padding: 0 .5em;}
+nav a.current {color: var(--menu-selected);}
+a {color: var(--link);text-decoration: none;box-sizing: border-box;}
+a:hover {text-decoration: underline;}
+footer {position: fixed;bottom: 0;left: 0;width: 100%;background-color: var(--menu-background);min-height: 2.5em;display: flex;}
+footer div {margin: auto;flex-wrap: wrap;justify-content: center;}
+footer * {display: flex;margin: auto .15em;}
+footer img {height: 1.5em;width: 1.5em;}
+p {margin: .5em;padding: 0;}
+/* pages */
+.icon {height: 10em;width: 10em;margin: 2em auto auto auto;}
+.features {text-align: left;max-width: 90vw;margin: auto;list-style: square;line-height: 1.5;}
+.screenshots {display: flex;flex-direction: row;max-width: 100vw;flex-wrap: wrap;justify-content: center;}
+.screenshots img {width: 45vw;margin: 1vw;border: .1em solid var(--img-border);max-width: 800px;}
+.action-buttons {display: flex;flex-wrap: wrap;max-width: 100vw;}
+.action-buttons * {margin: auto;display: flex;}
+.action-buttons img {height: 2em;width: 2em;}
+.action-buttons span {flex: 1;text-align: left;margin-left: .5em;}
+.feature-button, .screenshots-button, .github-button, .download-button {display: flex;width: 10em;padding: .5em 0;margin: .5em auto;color: var(--text);border: none;font-size: 1.5em;max-width: 80vw;}
+.feature-button, .screenshots-button, .github-button {background-color: var(--button-secondary);}
+.download-button {background-color: var(--button-primary);color: var(--button-text);}
+.download-button-list {display: flex;flex-wrap: wrap;}
+.download-button-list > div {display: flex;flex-direction: column;margin: 0 auto;padding: 1em;}
+.linux-downloads, .arm-downloads, .windows-downloads, .mac-downloads, .third-party-downloads {display: flex;flex-direction: column;margin: 0 auto;}
+.release-number {color: var(--text);}
+.feature-list {text-align: left;padding: 5em 2em;}
+.feature-list h2 {padding: .5em 0;}
+.feature-list ul {padding: .5em 0;}
+.cheatsheet, .cheatsheet img {max-width: 90vw;max-height: 90vh;margin: auto;}
+.cheatsheet img {filter: contrast(.5) invert() contrast(4) hue-rotate(180deg) saturate(4);}
+kbd {background: var(--code-background);padding: .1em;}
+/* iphone navbar */
+@media screen and (max-width: 630px) {
+    nav {height: 5em;display: grid;grid-template-areas: "a b f g" "a c f g" "a d f g" "a e f g";}
+    .logo {grid-area: a;}
+    .spacer {grid-area: f;}
+    #toggle-theme {grid-area: g;}
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- This page and my own icons are CC BY-SA 4.0 licensed @ Jelmer van Arnhem, -->
+    <!-- see ./LICENSE or https://creativecommons.org/licenses/by-sa/4.0/ -->
+    <!-- Vieb and the Vieb logo are GPL-3.0+ licensed @ Jelmer van Arnhem, -->
+    <!-- see ./LICENSE.GPL-3.0-or-later or http://gnu.org/licenses/gpl.html -->
+    <!-- The brand logos, screenshots and github badges are public domain via CC0 1.0, -->
+    <!-- see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/ -->
+    <head>
+        <!-- Content tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev; object-src 'none'; style-src 'unsafe-inline' vieb.dev; script-src vieb.dev; default-src 'none'">
+        <!-- Information -->
+        <meta name="description" content="Homepage of the Vim Inspired Electron Browser: Vieb">
+        <meta name="author" content="Jelmerro">
+        <title>Vieb - Features</title>
+        <!-- Links -->
+        <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+        <link rel="shortcut icon" type="image/svg+xml" href="img/icon.svg">
+        <link rel="stylesheet" href="style.css" type="text/css" media="all">
+        <script src="index.js"></script>
+    </head>
+    <body lang="en">
+        <nav>
+            <a class="logo" href="/"><img src="img/icon.svg"><span>Vieb</span></a>
+            <a class="current" href="/features">Features</a>
+            <a href="/screenshots">Screenshots</a>
+            <a href="/cheatsheet">Cheatsheet</a>
+            <a href="/download">Downloads</a>
+            <div class="spacer"></div>
+            <img id="toggle-theme" src="img/brightness.png">
+        </nav>
+        <main class="feature-list">
+            <h1>Features</h1>
+            <h3>For more information how to use these features to their full potential,</h3>
+            <h3>check the built-in offline help documentation by pressing <kbd>F1</kbd> while running Vieb.</h3>
+            <h2>Modes</h2>
+            <ul>
+                <li><b>Normal&nbsp;&nbsp;</b>Plenty of movement and switch options, most of them available by pressing a single key</li>
+                <li><b>Command&nbsp;</b>Access more complex functionality by entering commands with auto-completion</li>
+                <li><b>Explore&nbsp;</b>Enter a search (orange), navigate to websites (cyan) or browse files (yellow) with auto-completion</li>
+                <li><b>Follow&nbsp;&nbsp;</b>Simulate click events on urls, buttons, input fields and more</li>
+                <li><b>Search&nbsp;&nbsp;</b>Enter a search string and easily jump to next and previous matches</li>
+                <li><b>Pointer&nbsp;</b>Move a simulated cursor using the keyboard and execute clicks, hovers, image downloads and more</li>
+                <li><b>Visual&nbsp;&nbsp;</b>Select (and optionally copy) any text on the page using familiar Vim bindings</li>
+                <li><b>Insert&nbsp;&nbsp;</b>Regular interaction with the webpage, mostly used for typing text</li>
+            </ul>
+            <h2>Free</h2>
+            <ul>
+                <li>Free and open source code, fork and contribute on <a href="https://github.com/Jelmerro/Vieb" target="_blank">github</a></li>
+                <li>Discuss or suggest features on <a href="https://github.com/Jelmerro/Vieb" target="_blank">github</a> or <a href="https://reddit.com/r/vieb" target="_blank">reddit</a></li>
+                <li>Make your own builds using clear instructions included in the readme</li>
+            </ul>
+            <h2>Local first</h2>
+            <ul>
+                <li>Automatically suggests previously visited websites from your local history</li>
+                <li>Also suggests command names and arguments from memory</li>
+                <li>Configure how many suggestions should be shown</li>
+                <li>Fast and completely offline adblocking</li>
+                <li>AMP protection using local custom <kbd>redirects</kbd> setting</li>
+                <li>Offline help documentation available with <kbd>F1</kbd></li>
+            </ul>
+            <h2>Privacy</h2>
+            <ul>
+                <li>Strict permission system with custom permission allowlist and blocklists</li>
+                <li>Hide privacy sensitive navigator fields from websites</li>
+                <li>Firefox mode to override the navigator properties and the useragent to mimic Firefox</li>
+                <li>Hide and block local WebRTC addresses but allow the protocol to be used with external addresses</li>
+                <li>Vieb never sends data outside of website requests and opt-in user-enabled features</li>
+                <li>Optionally switch <kbd>adblocker</kbd> to update or check for updates on the version page</li>
+                <li>Not ever-green by design: update Vieb when you want to and how you want to</li>
+            </ul>
+            <h2>Accessible</h2>
+            <ul>
+                <li>Unified theme engine for all UI elements and built-in pages with simple CSS</li>
+                <li>Switch between dark and light themes, or create your own custom theme</li>
+                <li>Unified and consistent font and interface scaling using the <kbd>fontsize</kbd> setting</li>
+                <li>Remembers your zoom level per site, which can also be reset at anytime with Ctrl-0</li>
+                <li>Example configs to make Vieb work similar to other browsers such as Firefox or qutebrowser</li>
+                <li>Vieb is keyboard focussed, not limited, you can use the mouse for many features you are used to from other browsers</li>
+            </ul>
+            <h2>Security settings</h2>
+            <ul>
+                <li>Detailed permission settings, for notifications, fullscreen, microphone, openExternal and many more</li>
+                <li>Secure default permissions for more security and less distractions</li>
+                <li>Configure how to cache websites: clear on quit, or disabled entirely</li>
+                <li>Show favicons with a custom cache expiration duration (or disable)</li>
+                <li>Optionally clear cookies and/or localstorage automatically on quit</li>
+                <li>View individual cookies and delete them at will</li>
+                <li>Change download behavior from automatic to ask, confirm or block them completely</li>
+            </ul>
+            <h2>Window splitting</h2>
+            <ul>
+                <li>Display multiple websites in vertical and horizontal splits</li>
+                <li>Navigate between open webpages with the <kbd>buffer</kbd> command</li>
+                <li>Open new vertical splits with <kbd>Vexplore</kbd> or <kbd>vsplit</kbd></li>
+                <li>Open new horizontal splits with <kbd>Sexplore</kbd> or <kbd>split</kbd></li>
+                <li>Navigate between splits with Ctrl-w bindings, such as Ctrl-w and then hjkl</li>
+                <li>Resize and re-order splits with Ctrl-w and then -, +, &lt;, &gt; or r</li>
+                <li>Reset the custom split sizes with Ctrl-w and then =</li>
+            </ul>
+            <h2>Map commands</h2>
+            <ul>
+                <li>Define custom keybindings using familiar map, nmap, nnoremap commands</li>
+                <li>Map sets for all modes, while <kbd>nmap</kbd>, <kbd>vmap</kbd>, <kbd>cmap</kbd> and the others are mode-specific</li>
+                <li>Use <kbd>mapclear</kbd> to remove all custom mappings for all modes</li>
+                <li>Also clear built-in mappings with <kbd>mapclear!</kbd></li>
+                <li>Map keystrokes recursively to other keystrokes, using characters or the &lt;&gt;-notation</li>
+                <li>Keybindings that require multiple keys use the <kbd>showcmd</kbd>, <kbd>timeout</kbd> and <kbd>timeoutlen</kbd> settings</li>
+                <li>Recursive mappings will be limited to the maximum recursion depth set with <kbd>maxmapdepth</kbd></li>
+            </ul>
+            <h2>Viebrc</h2>
+            <ul>
+                <li>Store custom settings in a viebrc configuration file</li>
+                <li>Loaded from the Vieb data folder and from <kbd>~/.viebrc</kbd></li>
+                <li>Execute Vieb commands, such as <kbd>map</kbd>, <kbd>set</kbd>, <kbd>command</kbd> or <kbd>call</kbd></li>
+                <li>Can also be created based on the current settings by the <kbd>mkviebrc</kbd> command</kbd></li>
+                <li>Example configs available offline for: Firefox, Chromium, Vimium and Tridactyl</li>
+            </ul>
+            <h2>Set command</h2>
+            <ul>
+                <li>Read, append, update or unset any setting/option using the <kbd>set</kbd> command</li>
+                <li>Auto-completion for setting names and common values</li>
+                <li>Support for all of Vim's operators, such as +=, -=, ^=, &amp; and ?</li>
+                <li>Add multiple arguments to the set command to read/write multiple settings at once</li>
+                <li>Reset individual settings or "all" to the Vieb default with the &amp; suffix</li>
+                <li>Reload all settings from your Viebrc with the <kbd>reload</kbd> command</kbd></li>
+            </ul>
+            <h2>Vim-compatible options</h2>
+            <ul>
+                <li>Many settings and commands compatible with Vim, including:</li>
+                <ul>
+                    <li><b>:buffer</b> for switching between opened pages by index or name</li>
+                    <li><b>:close</b> for closing opened pages by index or name</li>
+                    <li><b>:command</b> for making custom commands</li>
+                    <li><b>:colorscheme</b> with support for custom themes</li>
+                    <li><b>ignorecase</b> case-insensitive search</li>
+                    <li><b>incsearch</b> show search results incrementally when typing</li>
+                    <li><b>:hardcopy</b> print a hardcopy onto paper</li>
+                    <li><b>:hide</b> hide a page by name or index while splitting windows</li>
+                    <li><b>:map</b> including variants, see "Map commands" paragraph above</li>
+                    <li><b>maxmapdepth</b> see "Map commands" paragraph above</li>
+                    <li><b>:mkv</b> short for mkviebrc instead of mkvimrc</li>
+                    <li><b>mouse</b> enable or disable mouse support, on by default</li>
+                    <li><b>mousefocus</b> switch to tabs or window splits on hover</li>
+                    <li><b>:quit(all)</b> exit Vieb (or close the current page if split)</li>
+                    <li><b>:set</b> as explained in the previous "Set command" paragraph</li>
+                    <li><b>showcmd</b> show pressed keys part of long mappings</li>
+                    <li><b>smartcase</b> case-sensitive search only when using any capital letters</li>
+                    <li><b>spell</b> toggle spellchecking, on by default</li>
+                    <li><b>spelllang</b> set the list of allowed languages</li>
+                    <li><b>:split</b> open a horizontal split</li>
+                    <li><b>splitbelow</b> create splits below current</li>
+                    <li><b>splitright</b> create splits right of current</li>
+                    <li><b>timeout</b> timeout toggle for typing mappings and such</li>
+                    <li><b>timeoutlen</b> duration of said timeout</li>
+                    <li><b>:vsplit</b> open a vertical split</li>
+                    <li><b>:write</b> write a page to disk</li>
+                    <li><b>Scrolling</b> with <kbd>j</kbd>, <kbd>k</kbd>, <kbd>&lt;C-d&gt;</kbd>, <kbd>&lt;C-u&gt;</kbd> etc.</li>
+                    <li>Most if not all <kbd>&lt;C-w&gt;</kbd> mappings and related commands</li>
+                </ul>
+                <li>Edit input fields in your favorite editor by setting the <kbd>vimcommand</kbd> option</li>
+            </ul>
+            <h2>Container tabs</h2>
+            <ul>
+                <li>Enable container tabs to separate browsing data from other tabs</li>
+                <li>Use the same container name multiple times to group multiple tabs</li>
+                <li>Color-code container names in the tabbar based on name</li>
+                <li>Manage individual cookies per container, but view aggregates of other data such as downloads</li>
+                <li>Remembers your previous browsing session, including container name</li>
+                <li>Automatically clear data for containers prefixed with "temp"</li>
+            </ul>
+            <h2>Ad-blocker</h2>
+            <ul>
+                <li>Integrated ad-blocker with cosmetic filtering</li>
+                <li>Works fast and completely offline</li>
+                <li>Optionally auto-update the lists or add your own</li>
+                <li>Supports custom lists and uses easylist and easyprivacy by default</li>
+            </ul>
+            <h2>Tabs</h2>
+            <ul>
+                <li>Set the minimum tab width, this differs a lot between other browsers</li>
+                <li>Tabs can be suspended with a command, on a timer and automatically on startup (like in Firefox)</li>
+                <li>When viewing multiple pages simultaneously, an orange indicator is present for the focussed tab</li>
+                <li>Shows a blue indicator for tabs that are currently producing sound, such as music or videos</li>
+                <li>Shows a white indicator for tabs that are muted</li>
+                <li>Shows a yellow indicator for tabs that are muted and are producing sound, such as music or videos</li>
+                <li>Tabs can be wrapped over multiple rows, this mode will always show all opened tabs in the bar</li>
+                <li>Tabs can be pinned with ":pin", which keeps them neatly aligned and always restores them on restart</li>
+                <li>When loading new pages, Vieb will default to loading HTTPS and can block redirects to HTTP</li>
+            </ul>
+            <h1>Want to try Vieb? Visit the <a href="/download">downloads</a> page</h1>
+            <h3>Remember that you can view the help documentation inside Vieb with <kbd>F1</kbd></h3>
+        </main>
+        <footer>
+            <div>
+                <span>Created by</span>
+                <a href="https://jelmerro.nl" target="_blank">
+                    <img src="img/jelmerro.jpg"><span>Jelmer van Arnhem</span>
+                </a>
+                <span>on</span>
+                <a href="https://github.com/Jelmerro/Vieb" target="_blank">
+                    <img src="img/github.svg"><span>Github</span>
+                </a>
+                <span>and supported on</span>
+                <a href="https://ko-fi.com/Jelmerro" target="_blank">
+                    <img src="img/ko-fi.svg"><span>Ko-fi</span>
+                </a>
+                <span>and</span>
+                <a href="https://github.com/sponsors/Jelmerro" target="_blank">
+                    <img src="img/github.svg"><span>Github</span>
+                </a>
+            </div>
+    </body>
+</html>

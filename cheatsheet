@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- This page and my own icons are CC BY-SA 4.0 licensed @ Jelmer van Arnhem, -->
+    <!-- see ./LICENSE or https://creativecommons.org/licenses/by-sa/4.0/ -->
+    <!-- Vieb and the Vieb logo are GPL-3.0+ licensed @ Jelmer van Arnhem, -->
+    <!-- see ./LICENSE.GPL-3.0-or-later or http://gnu.org/licenses/gpl.html -->
+    <!-- The brand logos, screenshots and github badges are public domain via CC0 1.0, -->
+    <!-- see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/ -->
+    <head>
+        <!-- Content tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev; object-src 'none'; style-src 'unsafe-inline' vieb.dev; script-src vieb.dev; default-src 'none'">
+        <!-- Information -->
+        <meta name="description" content="Homepage of the Vim Inspired Electron Browser: Vieb">
+        <meta name="author" content="Jelmerro">
+        <title>Vieb - Cheatsheet</title>
+        <!-- Links -->
+        <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+        <link rel="shortcut icon" type="image/svg+xml" href="img/icon.svg">
+        <link rel="stylesheet" href="style.css" type="text/css" media="all">
+        <script src="index.js"></script>
+    </head>
+    <body lang="en">
+        <nav>
+            <a class="logo" href="/"><img src="img/icon.svg"><span>Vieb</span></a>
+            <a href="/features">Features</a>
+            <a href="/screenshots">Screenshots</a>
+            <a class="current" href="/cheatsheet">Cheatsheet</a>
+            <a href="/download">Downloads</a>
+            <div class="spacer"></div>
+            <img id="toggle-theme" src="img/brightness.png">
+        </nav>
+        <main>
+            <h1>Vieb cheatsheet</h1>
+            <h3>
+                This an overview of most default Vieb mappings.<br />
+                It serves as a starting point to help you use Vieb.<br />
+                These are the defaults, most of it can be changed or customized.
+            </h3>
+            <a class="cheatsheet" href="img/cheatsheet.png" target="_blank"><img src="img/cheatsheet.png"></a>
+        </main>
+        <footer>
+            <div>
+                <span>Created by</span>
+                <a href="https://jelmerro.nl" target="_blank">
+                    <img src="img/jelmerro.jpg"><span>Jelmer van Arnhem</span>
+                </a>
+                <span>on</span>
+                <a href="https://github.com/Jelmerro/Vieb" target="_blank">
+                    <img src="img/github.svg"><span>Github</span>
+                </a>
+                <span>and supported on</span>
+                <a href="https://ko-fi.com/Jelmerro" target="_blank">
+                    <img src="img/ko-fi.svg"><span>Ko-fi</span>
+                </a>
+                <span>and</span>
+                <a href="https://github.com/sponsors/Jelmerro" target="_blank">
+                    <img src="img/github.svg"><span>Github</span>
+                </a>
+            </div>
+    </body>
+</html>

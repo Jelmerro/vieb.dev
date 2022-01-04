@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- This page and my own icons are CC BY-SA 4.0 licensed @ Jelmer van Arnhem, -->
+    <!-- see ./LICENSE or https://creativecommons.org/licenses/by-sa/4.0/ -->
+    <!-- Vieb and the Vieb logo are GPL-3.0+ licensed @ Jelmer van Arnhem, -->
+    <!-- see ./LICENSE.GPL-3.0-or-later or http://gnu.org/licenses/gpl.html -->
+    <!-- The brand logos, screenshots and github badges are public domain via CC0 1.0, -->
+    <!-- see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/ -->
+    <head>
+        <!-- Content tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev repology.org; object-src 'none'; style-src 'unsafe-inline' vieb.dev; script-src vieb.dev; connect-src api.github.com; default-src 'none'">
+        <!-- Information -->
+        <meta name="description" content="Homepage of the Vim Inspired Electron Browser: Vieb">
+        <meta name="author" content="Jelmerro">
+        <title>Vieb - Downloads</title>
+        <!-- Links -->
+        <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+        <link rel="shortcut icon" type="image/svg+xml" href="img/icon.svg">
+        <link rel="stylesheet" href="style.css" type="text/css" media="all">
+        <script src="index.js"></script>
+        <script src="download.js"></script>
+    </head>
+    <body lang="en">
+        <nav>
+            <a class="logo" href="/"><img src="img/icon.svg"><span>Vieb</span></a>
+            <a href="/features">Features</a>
+            <a href="/screenshots">Screenshots</a>
+            <a href="/cheatsheet">Cheatsheet</a>
+            <a class="current" href="/download">Downloads</a>
+            <div class="spacer"></div>
+            <img id="toggle-theme" src="img/brightness.png">
+        </nav>
+        <main>
+            <h1>Download Vieb releases</h1>
+            <h3>
+                Download the latest release (<span class="release-number"></span>)
+                below for your platform and architecture.<br>
+                Alternatively, you can view this and previous releases on
+                <a href="https://github.com/Jelmerro/Vieb/releases" target="_blank">github</a>.<br>
+                Third-party releases are made by users just like you for their favorite system.<br>
+            </h3>
+            <div class="download-button-list">
+                <div><h2>Linux x64</h2><div class="linux-downloads">Loading...</div></div>
+                <div><h2>Linux ARM64</h2><div class="arm-downloads">Loading...</div></div>
+                <div><h2>Windows</h2><div class="windows-downloads">Loading...</div></div>
+                <div><h2>Mac</h2><div class="mac-downloads">Loading...</div></div>
+                <div><h2>Third-party</h2><div class="third-party-downloads">Loading...</div></div>
+            </div>
+            <p>Popular releases are highlighted with grey bars, pick one of these when in doubt.</p>
+            <p>
+                For building your own release, go to
+                <a href="https://github.com/Jelmerro/Vieb" target="_blank">github</a>
+                for details or download
+                <a download href="https://github.com/Jelmerro/Vieb/archive/master.zip">the source</a>.
+            </p>
+        </main>
+        <footer>
+            <div>
+                <span>Created by</span>
+                <a href="https://jelmerro.nl" target="_blank">
+                    <img src="img/jelmerro.jpg"><span>Jelmer van Arnhem</span>
+                </a>
+                <span>on</span>
+                <a href="https://github.com/Jelmerro/Vieb" target="_blank">
+                    <img src="img/github.svg"><span>Github</span>
+                </a>
+                <span>and supported on</span>
+                <a href="https://ko-fi.com/Jelmerro" target="_blank">
+                    <img src="img/ko-fi.svg"><span>Ko-fi</span>
+                </a>
+                <span>and</span>
+                <a href="https://github.com/sponsors/Jelmerro" target="_blank">
+                    <img src="img/github.svg"><span>Github</span>
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>

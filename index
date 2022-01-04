@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- This page and my own icons are CC BY-SA 4.0 licensed @ Jelmer van Arnhem, -->
+    <!-- see ./LICENSE or https://creativecommons.org/licenses/by-sa/4.0/ -->
+    <!-- Vieb and the Vieb logo are GPL-3.0+ licensed @ Jelmer van Arnhem, -->
+    <!-- see ./LICENSE.GPL-3.0-or-later or http://gnu.org/licenses/gpl.html -->
+    <!-- The brand logos, screenshots and github badges are public domain via CC0 1.0, -->
+    <!-- see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/ -->
+    <head>
+        <!-- Content tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev img.shields.io; object-src 'none'; style-src 'unsafe-inline' vieb.dev; script-src vieb.dev; default-src 'none'">
+        <!-- Information -->
+        <meta name="description" content="Homepage of the Vim Inspired Electron Browser: Vieb">
+        <meta name="author" content="Jelmerro">
+        <title>Vieb - Vim bindings for the web by design</title>
+        <!-- Links -->
+        <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+        <link rel="shortcut icon" type="image/svg+xml" href="img/icon.svg">
+        <link rel="stylesheet" href="style.css" type="text/css" media="all">
+        <script src="index.js"></script>
+    </head>
+    <body lang="en">
+        <nav>
+            <a class="logo current" href="/"><img src="img/icon.svg"><span>Vieb</span></a>
+            <a href="/features">Features</a>
+            <a href="/screenshots">Screenshots</a>
+            <a href="/cheatsheet">Cheatsheet</a>
+            <a href="/download">Downloads</a>
+            <div class="spacer"></div>
+            <img id="toggle-theme" src="img/brightness.png">
+        </nav>
+        <main>
+            <img class="icon" src="img/icon.svg">
+            <h1>Vim bindings for the web by design</h1>
+            <div class="badges">
+                <a href="/download">
+                    <img src="https://img.shields.io/github/downloads/Jelmerro/Vieb/total?style=flat-square">
+                </a>
+                <a href="https://github.com/Jelmerro/Vieb/releases" target="_blank">
+                    <img src="https://img.shields.io/github/v/release/Jelmerro/Vieb?sort=semver&style=flat-square">
+                </a>
+                <a href="https://github.com/electron/electron" target="_blank">
+                    <img src="https://img.shields.io/github/package-json/dependency-version/Jelmerro/Vieb/dev/electron?style=flat-square">
+                </a>
+                <a href="https://github.com/Jelmerro/Vieb/blob/master/LICENSE" target="_blank">
+                    <img src="https://img.shields.io/badge/license-GPL--3.0_or_later-orange?style=flat-square">
+                </a>
+                <a href="https://github.com/sponsors/Jelmerro" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=github&message=sponsors&color=ea4aaa&logo=github-sponsors&style=flat-square">
+                </a>
+                <a href="https://ko-fi.com/Jelmerro" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=ko-fi&message=donate&color=red&logo=ko-fi&style=flat-square">
+                </a>
+                <a href="https://reddit.com/r/vieb" target="_blank">
+                    <img src="https://img.shields.io/reddit/subreddit-subscribers/vieb?style=social">
+                </a>
+            </div>
+            <h3>Vieb is the Vim Inspired Electron Browser</h3>
+            <h5>Vieb is pronounced like "deep" with a "v" and rhymes with sheep</h5>
+            <ul class="features">
+                <li><b>Free</b>, open source, fast and secure</li>
+                <li><b>Local first</b> adblocking, auto-complete, AMP protection, custom redirects and more, all without web requests</li>
+                <li><b>Privacy</b> with strict permission system, navigator overrides, firefox mode, custom WebRTC policy and more</li>
+                <li><b>Accessible</b> with custom themes, full interface &amp; fontsize scaling, page zooming, spellcheck and mouse support</li>
+                <li><b>Security settings</b> with permissions, cache usage, cookie management, (auto-)download settings and more</li>
+                <li><b>Window splitting</b> with buffer, split, Vexplore and Ctrl-w bindings, for multi-window browsing</li>
+                <li><b>Map commands</b> for completely custom keyboard sequences, keystrokes, commands and actions</li>
+                <li><b>Viebrc</b> config file for all custom/Vieb/Vim commands to configure settings permanently</li>
+                <li><b>Set command</b> for runtime setting configuration exactly like Vim</li>
+                <li><b>Vim-compatible options</b> like showcmd, timeout, colorscheme, maxmapdepth, spelllang, splitright, smartcase etc.</li>
+                <li><b>Container tabs</b> with colored grouping, auto-clearing, individual cookies and tab restore from containers</li>
+                <li><b>Ad-blocker</b> with cosmetic filtering, optional updater, custom lists and uses easylist/easyprivacy by default</li>
+                <li><b>Tabs</b> including audio indicator, a toggle for multi-line tabs, pinned tabs, muted tabs and suspended tabs</li>
+                <li><b>Offline help documentation</b> always available upon pressing <b>F1</b></li>
+                <li><b><a href="/features">And much, much more</a></b></li>
+            </ul>
+            <div class="action-buttons">
+                <a class="feature-button" href="/features">
+                    <div>
+                        <img src="img/text.png">
+                        <span>Features</span>
+                    </div>
+                </a>
+                <a class="screenshots-button" href="/screenshots">
+                    <div>
+                        <img src="img/pic.png">
+                        <span>Screenshots</span>
+                    </div>
+                </a>
+                <a class="github-button" href="https://github.com/Jelmerro/Vieb">
+                    <div>
+                        <img src="img/github.svg">
+                        <span>Github</span>
+                    </div>
+                </a>
+                <a class="download-button" href="/download">
+                    <div>
+                        <img src="img/download.png">
+                        <span>Downloads</span>
+                    </div>
+                </a>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <span>Created by</span>
+                <a href="https://jelmerro.nl" target="_blank">
+                    <img src="img/jelmerro.jpg"><span>Jelmer van Arnhem</span>
+                </a>
+                <span>on</span>
+                <a href="https://github.com/Jelmerro/Vieb" target="_blank">
+                    <img src="img/github.svg"><span>Github</span>
+                </a>
+                <span>and supported on</span>
+                <a href="https://ko-fi.com/Jelmerro" target="_blank">
+                    <img src="img/ko-fi.svg"><span>Ko-fi</span>
+                </a>
+                <span>and</span>
+                <a href="https://github.com/sponsors/Jelmerro" target="_blank">
+                    <img src="img/github.svg"><span>Github</span>
+                </a>
+            </div>
+    </body>
+</html>
