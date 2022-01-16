@@ -10,7 +10,7 @@
         <!-- Content tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev repology.org; object-src 'none'; style-src 'unsafe-inline' vieb.dev; script-src vieb.dev; connect-src api.github.com; default-src 'none'">
+        <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev repology.org; object-src 'none'; style-src 'unsafe-inline' vieb.dev; script-src vieb.dev; default-src 'none'">
         <!-- Information -->
         <meta name="description" content="Homepage of the Vim Inspired Electron Browser: Vieb">
         <meta name="author" content="Jelmerro">

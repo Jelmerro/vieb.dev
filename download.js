@@ -6,8 +6,7 @@
 // The brand logos, screenshots and github badges are public domain via CC0 1.0,
 // see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/
 
-let latestRelease = "6.2.0"
-const apiUrl = "https://api.github.com/repos/Jelmerro/Vieb/releases/latest"
+const latestRelease = "7.0.0"
 const linuxReleases = [
     {"name": "AppImage", "popular": true, "url": "Vieb-{}.AppImage"},
     {"name": "Fedora (rpm)", "url": "vieb-{}.x86_64.rpm"},
@@ -80,19 +79,4 @@ const addLinks = () => {
     document.querySelector(".third-party-downloads").appendChild(thirdParty)
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-    addLinks()
-    const req = new XMLHttpRequest()
-    req.onreadystatechange = () => {
-        if (req.readyState === 4 && req.status === 200) {
-            try {
-                latestRelease = JSON.parse(req.responseText).tag_name
-                addLinks()
-            } catch {
-                // Failed to fetch version, assuming stored version is latest
-            }
-        }
-    }
-    req.open("GET", apiUrl, true)
-    req.send(null)
-})
+window.addEventListener("DOMContentLoaded", addLinks)
