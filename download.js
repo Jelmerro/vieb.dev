@@ -8,7 +8,7 @@
 
 const latestRelease = "7.0.0"
 const linuxReleases = [
-    {"name": "AppImage", "popular": true, "url": "Vieb-{}.AppImage"},
+    {"name": "AppImage", "url": "Vieb-{}.AppImage"},
     {"name": "Fedora (rpm)", "url": "vieb-{}.x86_64.rpm"},
     {"name": "Debian/Ubuntu/Mint (deb)", "url": "vieb_{}_amd64.deb"},
     {"name": "Arch (pacman)", "url": "vieb-{}.pacman"},
@@ -23,13 +23,13 @@ const armReleases = [
     {"name": "Linux binary (tar.gz)", "url": "vieb-{}-arm64.tar.gz"}
 ]
 const windowsReleases = [
-    {"name": "Setup x64 (exe)", "popular": true, "url": "Vieb.Setup.{}.exe"},
+    {"name": "Setup x64 (exe)", "url": "Vieb.Setup.{}.exe"},
     {"name": "Portable x64 (exe)", "url": "Vieb.{}.exe"},
     {"name": "Portable x64 (zip)", "url": "Vieb-{}-win.zip"},
     {"name": "Portable ARM64 (zip)", "url": "Vieb-{}-arm64-win.zip"}
 ]
 const macReleases = [
-    {"name": "Unsigned x64 App", "popular": true, "url": "Vieb-{}-mac.zip"},
+    {"name": "Unsigned x64 App", "url": "Vieb-{}-mac.zip"},
     {"name": "Unsigned Silicon App", "url": "vieb-{}-mac-arm64.zip"}
 ]
 
@@ -38,10 +38,6 @@ const addButton = release => {
     button.className = "download-button"
     button.style.display = "inline-block"
     button.style.width = "15em"
-    if (release.popular) {
-        button.style.borderLeft = "solid .4em var(--button-accents)"
-        button.style.borderRight = "solid .4em var(--button-accents)"
-    }
     button.href = `https://github.com/Jelmerro/Vieb/releases/download/${
         latestRelease}/${release.url.replace("{}", latestRelease)}`
     button.textContent = release.name

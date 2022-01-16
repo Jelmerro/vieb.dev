@@ -26,7 +26,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 --button-text: #fff;
                 --button-primary: #f02;
                 --button-secondary: #fff;
-                --button-accents: #aaa;
             }
             #toggle-theme, .action-buttons img, footer img[src*=svg] {
                 filter: invert(.8);
