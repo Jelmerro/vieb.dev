@@ -6,7 +6,7 @@
 // The brand logos, screenshots and github badges are public domain via CC0 1.0,
 // see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/
 
-const latestRelease = "7.0.0"
+const latestRelease = "7.1.0"
 const linuxReleases = [
     {"name": "AppImage", "url": "Vieb-{}.AppImage"},
     {"name": "Fedora (rpm)", "url": "vieb-{}.x86_64.rpm"},
@@ -30,7 +30,7 @@ const windowsReleases = [
 ]
 const macReleases = [
     {"name": "Unsigned x64 App", "url": "Vieb-{}-mac.zip"},
-    {"name": "Unsigned Silicon App", "url": "vieb-{}-mac-arm64.zip"}
+    {"name": "Unsigned Silicon App", "url": "vieb-{}-arm64-mac.zip"}
 ]
 
 const addButton = release => {
