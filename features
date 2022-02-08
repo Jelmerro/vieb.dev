@@ -10,7 +10,7 @@
         <!-- Content tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev; object-src 'none'; style-src 'unsafe-inline' vieb.dev; script-src vieb.dev; default-src 'none'">
+        <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev img.shields.io; object-src 'none'; style-src 'unsafe-inline' vieb.dev; script-src vieb.dev; default-src 'none'">
         <!-- Information -->
         <meta name="description" content="Homepage of the Vim Inspired Electron Browser: Vieb">
         <meta name="author" content="Jelmerro">
@@ -212,5 +212,34 @@
                     <img src="img/github.svg"><span>Github</span>
                 </a>
             </div>
+            <div>
+                <a href="https://matrix.to/#/#vieb:matrix.org" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=matrix&message=space&color=eeeeee&logo=matrix&style=flat-square">
+                </a>
+                <a href="https://matrix.to/#/#vieb-announcements:matrix.org" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=matrix&message=announcements&color=eeeeee&logo=matrix&style=flat-square">
+                </a>
+                <a href="https://matrix.to/#/#vieb-general:matrix.org" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=matrix&message=general&color=eeeeee&logo=matrix&style=flat-square">
+                </a>
+                <a href="https://matrix.to/#/#vieb-offtopic:matrix.org" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=matrix&message=offtopic&color=eeeeee&logo=matrix&style=flat-square">
+                </a>
+            </div>
+            <div>
+                <a href="https://reddit.com/r/vieb" target="_blank">
+                    <img src="https://img.shields.io/reddit/subreddit-subscribers/vieb?style=social">
+                </a>
+                <a href="https://t.me/vieb_announcements" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=telegram&message=announcements&color=26A5E4&logo=telegram&style=flat-square">
+                </a>
+                <a href="https://t.me/vieb_general" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=telegram&message=general&color=26A5E4&logo=telegram&style=flat-square">
+                </a>
+                <a href="https://t.me/vieb_offtopic" target="_blank">
+                    <img src="https://img.shields.io/static/v1?label=telegram&message=offtopic&color=26A5E4&logo=telegram&style=flat-square">
+                </a>
+            </div>
+        </footer>
     </body>
 </html>
