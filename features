@@ -65,7 +65,7 @@
             <ul>
                 <li>Strict permission system with custom permission allowlist and blocklists</li>
                 <li>Hide privacy sensitive navigator fields from websites</li>
-                <li>Firefox mode to override the navigator properties and the useragent to mimic Firefox</li>
+                <li>Set a custom useragent and Vieb will match the navigator properties accordingly</li>
                 <li>Hide and block local WebRTC addresses but allow the protocol to be used with external addresses</li>
                 <li>Vieb never sends data outside of website requests and opt-in user-enabled features</li>
                 <li>Optionally switch <kbd>adblocker</kbd> to update or check for updates on the version page</li>
@@ -77,7 +77,7 @@
                 <li>Switch between dark and light themes, or create your own custom theme</li>
                 <li>Unified and consistent font and interface scaling using the <kbd>fontsize</kbd> setting</li>
                 <li>Remembers your zoom level per site, which can also be reset at anytime with Ctrl-0</li>
-                <li>Example configs to make Vieb work similar to other browsers such as Firefox or qutebrowser</li>
+                <li>Example configs to make Vieb work similar to other browsers such as Firefox, qutebrowser and many more</li>
                 <li>Vieb is keyboard focussed, not limited, you can use the mouse for many features you are used to from other browsers</li>
             </ul>
             <h2>Security settings</h2>
@@ -116,7 +116,7 @@
                 <li>Loaded from the Vieb data folder and from <kbd>~/.viebrc</kbd></li>
                 <li>Execute Vieb commands, such as <kbd>map</kbd>, <kbd>set</kbd>, <kbd>command</kbd> or <kbd>call</kbd></li>
                 <li>Can also be created based on the current settings by the <kbd>mkviebrc</kbd> command</kbd></li>
-                <li>Example configs available offline for: Firefox, Chromium, Vimium and Tridactyl</li>
+                <li>Example configs available offline for: Firefox, Chromium, Vimium, Tridactyl and more</li>
             </ul>
             <h2>Set command</h2>
             <ul>

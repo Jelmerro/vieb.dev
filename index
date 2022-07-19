@@ -59,7 +59,7 @@
             <ul class="features">
                 <li><b>Free</b>, open source, fast and secure</li>
                 <li><b>Local first</b> adblocking, auto-complete, AMP protection, custom redirects and more, all without web requests</li>
-                <li><b>Privacy</b> with strict permission system, navigator overrides, firefox mode, custom WebRTC policy and more</li>
+                <li><b>Privacy</b> with strict permission system, navigator overrides, custom useragent, custom WebRTC policy and more</li>
                 <li><b>Accessible</b> with custom themes, full interface &amp; fontsize scaling, page zooming, spellcheck and mouse support</li>
                 <li><b>Security settings</b> with permissions, cache usage, cookie management, (auto-)download settings and more</li>
                 <li><b>Window splitting</b> with buffer, split, Vexplore and Ctrl-w bindings, for multi-window browsing</li>
