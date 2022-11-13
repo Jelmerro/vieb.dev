@@ -47,22 +47,14 @@ const addButton = release => {
 const addLinks = () => {
     document.querySelector(".release-number").textContent = latestRelease
     const linux = document.querySelector(".linux-downloads")
-    const arm = document.querySelector(".arm-downloads")
-    const windows = document.querySelector(".windows-downloads")
-    const mac = document.querySelector(".mac-downloads")
     linux.textContent = ""
-    arm.textContent = ""
-    windows.textContent = ""
-    mac.textContent = ""
     linuxReleases.forEach(release => linux.appendChild(addButton(release)))
+    const arm = document.querySelector(".arm-downloads")
+    arm.textContent = ""
     armReleases.forEach(release => arm.appendChild(addButton(release)))
+    const windows = document.querySelector(".windows-downloads")
+    windows.textContent = ""
     windowsReleases.forEach(release => windows.appendChild(addButton(release)))
-    macReleases.forEach(release => mac.appendChild(addButton(release)))
-    const note = document.createElement("a")
-    note.href = "https://github.com/Jelmerro/Vieb/blob/master/FAQ.md#mac"
-    note.textContent = "Signing it yourself isn't hard"
-    note.target = "_blank"
-    mac.appendChild(note)
     const thirdParty = document.createElement("a")
     thirdParty.href = "https://repology.org/project/vieb/versions"
     thirdParty.setAttribute("target", "_blank")
@@ -73,6 +65,14 @@ const addLinks = () => {
     thirdParty.appendChild(thirdPartyImg)
     document.querySelector(".third-party-downloads").textContent = ""
     document.querySelector(".third-party-downloads").appendChild(thirdParty)
+    const mac = document.querySelector(".mac-downloads")
+    mac.textContent = ""
+    macReleases.forEach(release => mac.appendChild(addButton(release)))
+    const note = document.createElement("a")
+    note.href = "https://github.com/Jelmerro/Vieb/blob/master/FAQ.md#mac"
+    note.textContent = "Signing it yourself isn't hard"
+    note.target = "_blank"
+    mac.appendChild(note)
 }
 
 window.addEventListener("DOMContentLoaded", addLinks)

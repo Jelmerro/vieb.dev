@@ -47,8 +47,8 @@
                 <div><h2>Linux x64</h2><div class="linux-downloads">Loading...</div></div>
                 <div><h2>Linux ARM64</h2><div class="arm-downloads">Loading...</div></div>
                 <div><h2>Windows</h2><div class="windows-downloads">Loading...</div></div>
-                <div><h2>Mac</h2><div class="mac-downloads">Loading...</div></div>
                 <div><h2>Third-party</h2><div class="third-party-downloads">Loading...</div></div>
+                <div><h2>Mac</h2><div class="mac-downloads">Loading...</div></div>
             </div>
         </main>
         <footer>
