@@ -6,7 +6,7 @@
 // The brand logos, screenshots and github badges are public domain via CC0 1.0,
 // see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/
 
-const latestRelease = "9.3.0"
+const latestRelease = "9.4.0"
 const releasesList = [
     {
         "name": "Windows",
