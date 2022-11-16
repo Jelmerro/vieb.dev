@@ -70,9 +70,6 @@
                 <a href="https://matrix.to/#/#vieb-general:matrix.org" target="_blank">
                     <img src="https://img.shields.io/static/v1?label=matrix&message=general&color=eeeeee&logo=matrix&style=flat-square">
                 </a>
-                <a href="https://matrix.to/#/#vieb-offtopic:matrix.org" target="_blank">
-                    <img src="https://img.shields.io/static/v1?label=matrix&message=offtopic&color=eeeeee&logo=matrix&style=flat-square">
-                </a>
             </div>
             <div>
                 <a href="https://reddit.com/r/vieb" target="_blank">
@@ -83,9 +80,6 @@
                 </a>
                 <a href="https://t.me/vieb_general" target="_blank">
                     <img src="https://img.shields.io/static/v1?label=telegram&message=general&color=26A5E4&logo=telegram&style=flat-square">
-                </a>
-                <a href="https://t.me/vieb_offtopic" target="_blank">
-                    <img src="https://img.shields.io/static/v1?label=telegram&message=offtopic&color=26A5E4&logo=telegram&style=flat-square">
                 </a>
             </div>
         </footer>

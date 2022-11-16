@@ -7,36 +7,89 @@
 // see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/
 
 const latestRelease = "9.3.0"
-const linuxReleases = [
-    {"name": "AppImage", "url": "Vieb-{}.AppImage"},
-    {"name": "Fedora (rpm)", "url": "vieb-{}.x86_64.rpm"},
-    {"name": "Debian/Ubuntu/Mint (deb)", "url": "vieb_{}_amd64.deb"},
-    {"name": "Arch (pacman)", "url": "vieb-{}.pacman"},
-    {"name": "Snap", "url": "vieb_{}_amd64.snap"},
-    {"name": "Linux binary (tar.gz)", "url": "vieb-{}.tar.gz"},
-    {"name": "Alpine Edge", "cmd": "apk add vieb"}
-]
-const armReleases = [
-    {"name": "AppImage", "url": "Vieb-{}-arm64.AppImage"},
-    {"name": "Fedora (rpm)", "url": "vieb-{}.aarch64.rpm"},
-    {"name": "Debian/Ubuntu/Mint (deb)", "url": "vieb_{}_arm64.deb"},
-    {"name": "Arch (pacman)", "url": "vieb-{}-aarch64.pacman"},
-    {"name": "Linux binary (tar.gz)", "url": "vieb-{}-arm64.tar.gz"},
-    {"name": "Alpine Edge", "cmd": "apk add vieb"}
-]
-const windowsReleases = [
-    {"name": "Setup x64 (exe)", "url": "Vieb.Setup.{}.exe"},
-    {"name": "Portable x64 (exe)", "url": "Vieb.{}.exe"},
-    {"name": "Portable x64 (zip)", "url": "Vieb-{}-win.zip"},
-    {"name": "Portable ARM64 (zip)", "url": "Vieb-{}-arm64-win.zip"},
-    {"name": "Chocolatey", "cmd": "choco install vieb"},
-    {"name": "Scoop", "cmd": ["scoop bucket add extras", "scoop install vieb"]},
-    {"name": "winget", "cmd": "winget  install vieb"}
-]
-const macReleases = [
-    {"name": "Unsigned x64 App", "url": "Vieb-{}-mac.zip"},
-    {"name": "Unsigned Silicon App", "url": "vieb-{}-arm64-mac.zip"},
-    {"name": "homebrew", "cmd": "brew install --cask vieb"}
+const releasesList = [
+    {
+        "name": "Windows",
+        "options": [
+            {"name": "Setup x64 (exe)", "url": "Vieb.Setup.{}.exe"},
+            {"name": "Portable x64 (exe)", "url": "Vieb.{}.exe"},
+            {"name": "Portable x64 (zip)", "url": "Vieb-{}-win.zip"},
+            {"name": "Portable ARM64 (zip)", "url": "Vieb-{}-arm64-win.zip"},
+            {"name": "Chocolatey", "cmd": "choco install vieb"},
+            {
+                "name": "Scoop",
+                "cmd": [
+                    "scoop bucket add extras",
+                    "scoop install vieb"
+                ]
+            },
+            {"name": "Winget", "cmd": "winget  install vieb"}
+        ]
+    },
+    {
+        "name": "Fedora",
+        "options": [
+            {"name": "RPM x64", "url": "vieb-{}.x86_64.rpm"},
+            {"name": "RPM arm64", "url": "vieb-{}.aarch64.rpm"},
+            {
+                "name": "DNF repository",
+                "cmd": [
+                    "sudo dnf config-manager --add-repo https://jelmerro.nl/fedora/jelmerro.repo",
+                    "sudo dnf install vieb"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Debian/Ubuntu/Mint",
+        "options": [
+            {"name": "Deb x64", "url": "vieb_{}_amd64.deb"},
+            {"name": "Deb arm64", "url": "vieb_{}_arm64.deb"},
+            {"name": "Snap x64", "url": "vieb_{}_amd64.snap"},
+            {
+                "name": "APT repository",
+                "cmd": [
+                    "sudo apt add-repository \"deb [trusted=yes] https://jelmerro.nl/debs /\"",
+                    "sudo apt update",
+                    "sudo apt install vieb"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Arch",
+        "options": [
+            {"name": "Pacman x64", "url": "vieb-{}.pacman"},
+            {"name": "Pacman arm64", "url": "vieb-{}-aarch64.pacman"},
+            {
+                "name": "Arch user repository",
+                "link": "https://aur.archlinux.org/packages/vieb-bin"
+            }
+        ]
+    },
+    {
+        "name": "Mac",
+        "options": [
+            {"name": "Unsigned x64 App", "url": "Vieb-{}-mac.zip"},
+            {"name": "Unsigned Silicon App", "url": "vieb-{}-arm64-mac.zip"},
+            {
+                "name": "Apps must be manually signed",
+                "link": "https://github.com/Jelmerro/Vieb/blob/master/FAQ.md#mac",
+                "linktitle": "See the FAQ"
+            },
+            {"name": "Homebrew", "cmd": "brew install --cask vieb"}
+        ]
+    },
+    {
+        "name": "Other Linux",
+        "options": [
+            {"name": "AppImage x64", "url": "Vieb-{}.AppImage"},
+            {"name": "AppImage arm64", "url": "Vieb-{}-arm64.AppImage"},
+            {"name": "tar.gz x64", "url": "vieb-{}.tar.gz"},
+            {"name": "tar.gz arm64", "url": "vieb-{}-arm64.tar.gz"},
+            {"name": "Alpine Edge", "cmd": "apk add vieb"}
+        ]
+    }
 ]
 
 const addInstall = release => {
@@ -44,11 +97,22 @@ const addInstall = release => {
         const button = document.createElement("a")
         button.className = "download-button"
         button.style.display = "inline-block"
-        button.style.width = "15em"
+        button.style.width = "16em"
         button.href = `https://github.com/Jelmerro/Vieb/releases/download/${
             latestRelease}/${release.url.replace("{}", latestRelease)}`
         button.textContent = release.name
         return button
+    }
+    if (release.link) {
+        const container = document.createElement("div")
+        container.textContent = `${release.name}: `
+        container.className = "download-command"
+        const link = document.createElement("a")
+        link.href = release.link
+        link.textContent = release.linktitle ?? release.link.split("/").at(-1)
+        link.target = "_blank"
+        container.appendChild(link)
+        return container
     }
     const container = document.createElement("div")
     container.textContent = `${release.name}: `
@@ -70,16 +134,20 @@ const addInstall = release => {
 
 const addLinks = () => {
     document.querySelector(".release-number").textContent = latestRelease
-    const linux = document.querySelector(".linux-downloads")
-    linux.textContent = ""
-    linuxReleases.forEach(release => linux.appendChild(addInstall(release)))
-    const arm = document.querySelector(".arm-downloads")
-    arm.textContent = ""
-    armReleases.forEach(release => arm.appendChild(addInstall(release)))
-    const windows = document.querySelector(".windows-downloads")
-    windows.textContent = ""
-    windowsReleases.forEach(release => windows.appendChild(addInstall(release)))
+    const downloadList = document.querySelector(".download-button-list")
+    downloadList.textContent = ""
+    for (const release of releasesList) {
+        const container = document.createElement("div")
+        container.className = "os-downloads"
+        container.innerHTML = `<h2>${release.name}</h2>`
+        release.options.forEach(r => container.appendChild(addInstall(r)))
+        downloadList.appendChild(container)
+    }
+    const container = document.createElement("div")
+    container.className = "os-downloads"
+    container.innerHTML = `<h2>Third-Party</h2>`
     const thirdParty = document.createElement("a")
+    thirdParty.style.width = "22.5em"
     thirdParty.href = "https://repology.org/project/vieb/versions"
     thirdParty.setAttribute("target", "_blank")
     const thirdPartyImg = document.createElement("img")
@@ -87,16 +155,8 @@ const addLinks = () => {
         + `?minversion=${latestRelease}`
     thirdPartyImg.setAttribute("alt", "Third-party Vieb releases table")
     thirdParty.appendChild(thirdPartyImg)
-    document.querySelector(".third-party-downloads").textContent = ""
-    document.querySelector(".third-party-downloads").appendChild(thirdParty)
-    const mac = document.querySelector(".mac-downloads")
-    mac.textContent = ""
-    macReleases.forEach(release => mac.appendChild(addInstall(release)))
-    const note = document.createElement("a")
-    note.href = "https://github.com/Jelmerro/Vieb/blob/master/FAQ.md#mac"
-    note.textContent = "Apps must be signed manually to work"
-    note.target = "_blank"
-    mac.appendChild(note)
+    container.appendChild(thirdParty)
+    downloadList.appendChild(container)
 }
 
 window.addEventListener("DOMContentLoaded", addLinks)
