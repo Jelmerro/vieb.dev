@@ -13,48 +13,72 @@ const linuxReleases = [
     {"name": "Debian/Ubuntu/Mint (deb)", "url": "vieb_{}_amd64.deb"},
     {"name": "Arch (pacman)", "url": "vieb-{}.pacman"},
     {"name": "Snap", "url": "vieb_{}_amd64.snap"},
-    {"name": "Linux binary (tar.gz)", "url": "vieb-{}.tar.gz"}
+    {"name": "Linux binary (tar.gz)", "url": "vieb-{}.tar.gz"},
+    {"name": "Alpine Edge", "cmd": "apk add vieb"}
 ]
 const armReleases = [
     {"name": "AppImage", "url": "Vieb-{}-arm64.AppImage"},
     {"name": "Fedora (rpm)", "url": "vieb-{}.aarch64.rpm"},
     {"name": "Debian/Ubuntu/Mint (deb)", "url": "vieb_{}_arm64.deb"},
     {"name": "Arch (pacman)", "url": "vieb-{}-aarch64.pacman"},
-    {"name": "Linux binary (tar.gz)", "url": "vieb-{}-arm64.tar.gz"}
+    {"name": "Linux binary (tar.gz)", "url": "vieb-{}-arm64.tar.gz"},
+    {"name": "Alpine Edge", "cmd": "apk add vieb"}
 ]
 const windowsReleases = [
     {"name": "Setup x64 (exe)", "url": "Vieb.Setup.{}.exe"},
     {"name": "Portable x64 (exe)", "url": "Vieb.{}.exe"},
     {"name": "Portable x64 (zip)", "url": "Vieb-{}-win.zip"},
-    {"name": "Portable ARM64 (zip)", "url": "Vieb-{}-arm64-win.zip"}
+    {"name": "Portable ARM64 (zip)", "url": "Vieb-{}-arm64-win.zip"},
+    {"name": "Chocolatey", "cmd": "choco install vieb"},
+    {"name": "Scoop", "cmd": ["scoop bucket add extras", "scoop install vieb"]},
+    {"name": "winget", "cmd": "winget  install vieb"}
 ]
 const macReleases = [
     {"name": "Unsigned x64 App", "url": "Vieb-{}-mac.zip"},
-    {"name": "Unsigned Silicon App", "url": "vieb-{}-arm64-mac.zip"}
+    {"name": "Unsigned Silicon App", "url": "vieb-{}-arm64-mac.zip"},
+    {"name": "homebrew", "cmd": "brew install --cask vieb"}
 ]
 
-const addButton = release => {
-    const button = document.createElement("a")
-    button.className = "download-button"
-    button.style.display = "inline-block"
-    button.style.width = "15em"
-    button.href = `https://github.com/Jelmerro/Vieb/releases/download/${
-        latestRelease}/${release.url.replace("{}", latestRelease)}`
-    button.textContent = release.name
-    return button
+const addInstall = release => {
+    if (release.url) {
+        const button = document.createElement("a")
+        button.className = "download-button"
+        button.style.display = "inline-block"
+        button.style.width = "15em"
+        button.href = `https://github.com/Jelmerro/Vieb/releases/download/${
+            latestRelease}/${release.url.replace("{}", latestRelease)}`
+        button.textContent = release.name
+        return button
+    }
+    const container = document.createElement("div")
+    container.textContent = `${release.name}: `
+    container.className = "download-command"
+    if (typeof release.cmd === "string") {
+        const command = document.createElement("kbd")
+        command.textContent = release.cmd
+        container.appendChild(command)
+    } else {
+        container.classList.add("multiline")
+        for (const cmd of release.cmd) {
+            const command = document.createElement("kbd")
+            command.textContent = cmd
+            container.appendChild(command)
+        }
+    }
+    return container
 }
 
 const addLinks = () => {
     document.querySelector(".release-number").textContent = latestRelease
     const linux = document.querySelector(".linux-downloads")
     linux.textContent = ""
-    linuxReleases.forEach(release => linux.appendChild(addButton(release)))
+    linuxReleases.forEach(release => linux.appendChild(addInstall(release)))
     const arm = document.querySelector(".arm-downloads")
     arm.textContent = ""
-    armReleases.forEach(release => arm.appendChild(addButton(release)))
+    armReleases.forEach(release => arm.appendChild(addInstall(release)))
     const windows = document.querySelector(".windows-downloads")
     windows.textContent = ""
-    windowsReleases.forEach(release => windows.appendChild(addButton(release)))
+    windowsReleases.forEach(release => windows.appendChild(addInstall(release)))
     const thirdParty = document.createElement("a")
     thirdParty.href = "https://repology.org/project/vieb/versions"
     thirdParty.setAttribute("target", "_blank")
@@ -67,10 +91,10 @@ const addLinks = () => {
     document.querySelector(".third-party-downloads").appendChild(thirdParty)
     const mac = document.querySelector(".mac-downloads")
     mac.textContent = ""
-    macReleases.forEach(release => mac.appendChild(addButton(release)))
+    macReleases.forEach(release => mac.appendChild(addInstall(release)))
     const note = document.createElement("a")
     note.href = "https://github.com/Jelmerro/Vieb/blob/master/FAQ.md#mac"
-    note.textContent = "Signing it yourself isn't hard"
+    note.textContent = "Apps must be signed manually to work"
     note.target = "_blank"
     mac.appendChild(note)
 }

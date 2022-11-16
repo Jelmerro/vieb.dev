@@ -61,6 +61,7 @@ p {margin: .5em;padding: 0;}
 .download-button {background-color: var(--button-primary);color: var(--button-text);}
 .download-button-list {display: flex;flex-wrap: wrap;}
 .download-button-list > div {display: flex;flex-direction: column;margin: 0 auto;padding: 1em;}
+.download-command {margin: .5em 0;}
 .linux-downloads, .arm-downloads, .windows-downloads, .mac-downloads, .third-party-downloads {display: flex;flex-direction: column;margin: 0 auto;}
 .release-number {color: var(--text);}
 .feature-list {text-align: left;padding: 7em 2em;}
@@ -68,7 +69,8 @@ p {margin: .5em;padding: 0;}
 .feature-list ul {padding: .5em 0;}
 .cheatsheet, .cheatsheet img {max-width: 90vw;margin: auto;}
 .cheatsheet img {filter: contrast(.5) invert() contrast(4) hue-rotate(180deg) saturate(4);}
-kbd {background: var(--code-background);padding: .1em;}
+kbd {background: var(--code-background);padding: .1em;user-select: text;}
+.multiline {display: flex;flex-direction: column;}
 /* iphone navbar */
 @media screen and (max-width: 630px) {
     nav {height: 5em;display: grid;grid-template-areas: "a b f g" "a c f g" "a d f g" "a e f g";}

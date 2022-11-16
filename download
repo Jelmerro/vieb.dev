@@ -37,7 +37,7 @@
             <h3>
                 Download the latest release (<span class="release-number"></span>) below for your platform and architecture.<br>
                 Alternatively, you can view all versions on <a href="https://github.com/Jelmerro/Vieb/releases" target="_blank">Github releases</a>.<br>
-                Third-party releases are made by users just like you for their favorite system.<br>
+                The listed commands can be used to install the third-party releases.<br>
                 <a href="https://github.com/Jelmerro/Vieb" target="_blank">Repository</a> -
                 <a download href="https://github.com/Jelmerro/Vieb/archive/master.zip">Source</a> -
                 <a href="https://github.com/Jelmerro/Vieb/blob/master/FAQ.md" target="_blank">FAQ</a> -
