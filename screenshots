@@ -7,10 +7,11 @@
     <!-- The brand logos, screenshots and github badges are public domain via CC0 1.0, -->
     <!-- see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/ -->
     <head>
-        <!-- Content tags -->
+        <!-- Meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html" />
         <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev img.shields.io; object-src 'none'; style-src 'unsafe-inline' vieb.dev; script-src vieb.dev; default-src 'none'">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Information -->
         <meta name="description" content="Homepage of the Vim Inspired Electron Browser: Vieb">
         <meta name="author" content="Jelmerro">

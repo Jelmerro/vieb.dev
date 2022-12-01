@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
         let lightTheme = document.getElementById("light-theme")
         if (lightTheme) {
             document.head.removeChild(lightTheme)
-            localStorage.clear()
+            localStorage.removeItem("theme")
         } else {
             lightTheme = document.createElement("style")
             lightTheme.id = "light-theme"
