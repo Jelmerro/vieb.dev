@@ -52,7 +52,9 @@ const releasesList = [
                     "sudo apt add-repository \"deb [trusted=yes] https://jelmerro.nl/debs /\"",
                     "sudo apt update",
                     "sudo apt install vieb"
-                ]
+                ],
+                "note": "Some distributions use `add-apt-repository`"
+                    + " instead of `apt add-repository`"
             }
         ]
     },
@@ -128,6 +130,9 @@ const addInstall = release => {
             command.textContent = cmd
             container.appendChild(command)
         }
+    }
+    if (release.note) {
+        container.append(release.note)
     }
     return container
 }
