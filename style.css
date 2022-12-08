@@ -79,3 +79,31 @@ kbd {background: var(--code-background);padding: .1em;}
     .spacer {grid-area: f;}
     #toggle-theme {grid-area: g;}
 }
+/* light theme */
+[data-theme="light"] {
+    --text: #333;
+    --background: #eee;
+    --subtext: #555;
+    --link: #08f;
+    --menu-background: #ddd;
+    --code-background: #fff;
+    --img-border: #fff;
+    --button-text: #fff;
+    --button-primary: #f02;
+    --button-secondary: #fff;
+}
+[data-theme="light"] #toggle-theme {
+    filter: invert(.8);
+}
+[data-theme="light"] .action-buttons img {
+    filter: invert(.8);
+}
+[data-theme="light"] footer img[src*=svg] {
+    filter: invert(.8);
+}
+[data-theme="light"] .third-party-downloads img {
+    filter: contrast(.5) invert() contrast(4)
+    hue-rotate(180deg) saturate(4);
+}
+[data-theme="light"] .download-button img {filter: none;}
+[data-theme="light"] .cheatsheet img {filter: none;}
