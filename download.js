@@ -97,7 +97,7 @@ const releasesList = [
 const addInstall = release => {
     if (release.url) {
         const button = document.createElement("a")
-        button.className = "download-button"
+        button.classList.add("download-button")
         button.style.display = "inline-block"
         button.style.width = "16em"
         button.href = `https://github.com/Jelmerro/Vieb/releases/download/${
@@ -108,27 +108,27 @@ const addInstall = release => {
     if (release.link) {
         const container = document.createElement("div")
         container.textContent = `${release.name}: `
-        container.className = "download-command"
+        container.classList.add("download-command")
         const link = document.createElement("a")
         link.href = release.link
         link.textContent = release.linktitle ?? release.link.split("/").at(-1)
         link.target = "_blank"
-        container.appendChild(link)
+        container.append(link)
         return container
     }
     const container = document.createElement("div")
     container.textContent = `${release.name}: `
-    container.className = "download-command"
+    container.classList.add("download-command")
     if (typeof release.cmd === "string") {
         const command = document.createElement("kbd")
         command.textContent = release.cmd
-        container.appendChild(command)
+        container.append(command)
     } else {
         container.classList.add("multiline")
         for (const cmd of release.cmd) {
             const command = document.createElement("kbd")
             command.textContent = cmd
-            container.appendChild(command)
+            container.append(command)
         }
     }
     if (release.note) {
@@ -143,14 +143,18 @@ const addLinks = () => {
     downloadList.textContent = ""
     for (const release of releasesList) {
         const container = document.createElement("div")
-        container.className = "os-downloads"
-        container.innerHTML = `<h2>${release.name}</h2>`
-        release.options.forEach(r => container.appendChild(addInstall(r)))
-        downloadList.appendChild(container)
+        container.classList.add("os-downloads")
+        const h2 = document.createElement("h2")
+        h2.textContent = release.name
+        container.append(h2)
+        release.options.forEach(r => container.append(addInstall(r)))
+        downloadList.append(container)
     }
     const container = document.createElement("div")
-    container.className = "os-downloads"
-    container.innerHTML = `<h2>Third-Party</h2>`
+    container.classList.add("os-downloads")
+    const h2 = document.createElement("h2")
+    h2.textContent = "Third-Party"
+    container.append(h2)
     const thirdParty = document.createElement("a")
     thirdParty.style.width = "22.5em"
     thirdParty.href = "https://repology.org/project/vieb/versions"
@@ -159,9 +163,9 @@ const addLinks = () => {
     thirdPartyImg.src = "https://repology.org/badge/vertical-allrepos/vieb.svg"
         + `?minversion=${latestRelease}`
     thirdPartyImg.setAttribute("alt", "Third-party Vieb releases table")
-    thirdParty.appendChild(thirdPartyImg)
-    container.appendChild(thirdParty)
-    downloadList.appendChild(container)
+    thirdParty.append(thirdPartyImg)
+    container.append(thirdParty)
+    downloadList.append(container)
 }
 
 window.addEventListener("DOMContentLoaded", addLinks)
