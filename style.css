@@ -34,7 +34,7 @@ b {font-size: 1.2em;line-height: 1;}
 nav {position: fixed;top: 0;left: 0;width: 100%;background-color: var(--menu-background);z-index: 2;}
 nav, nav * {display: flex;margin: auto 0;}
 nav .spacer {flex: 1;}
-#toggle-theme {height: 2em;padding: 1.5em;cursor: pointer;}
+#toggle-theme {height: 2em;width: 2em;padding: 1.5em;cursor: pointer;}
 #toggle-theme:hover {filter: invert(.5);}
 .logo img {height: 4em;width: 4em;margin-left: 1em;}
 .logo span {margin: auto .5em auto .5em;font-size: 2em;}

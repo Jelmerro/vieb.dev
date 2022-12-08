@@ -24,13 +24,13 @@
     </head>
     <body lang="en">
         <nav>
-            <a class="logo" href="/"><img src="img/icon.svg"><span>Vieb</span></a>
+            <a class="logo" href="/"><img alt="favicon" src="img/icon.svg"><span>Vieb</span></a>
             <a class="current" href="/features">Features</a>
             <a href="/screenshots">Screenshots</a>
             <a href="/cheatsheet">Cheatsheet</a>
             <a href="/download">Downloads</a>
             <div class="spacer"></div>
-            <img id="toggle-theme" src="img/brightness.png">
+            <img alt="theme" id="toggle-theme" src="img/brightness.png">
         </nav>
         <main class="feature-list">
             <h1>Features</h1>
@@ -198,41 +198,41 @@
             <div>
                 <span>Created by</span>
                 <a href="https://jelmerro.nl" target="_blank">
-                    <img src="img/jelmerro.jpg"><span>Jelmer van Arnhem</span>
+                    <img alt="homepage" src="img/jelmerro.jpg"><span>Jelmer van Arnhem</span>
                 </a>
                 <span>on</span>
                 <a href="https://github.com/Jelmerro/Vieb" target="_blank">
-                    <img src="img/github.svg"><span>Github</span>
+                    <img alt="github" src="img/github.svg"><span>Github</span>
                 </a>
                 <span>and supported on</span>
                 <a href="https://ko-fi.com/Jelmerro" target="_blank">
-                    <img src="img/ko-fi.svg"><span>Ko-fi</span>
+                    <img alt="ko-fi" src="img/ko-fi.svg"><span>Ko-fi</span>
                 </a>
                 <span>and</span>
                 <a href="https://github.com/sponsors/Jelmerro" target="_blank">
-                    <img src="img/github.svg"><span>Github</span>
+                    <img alt="github" src="img/github.svg"><span>Github</span>
                 </a>
             </div>
             <div>
                 <a href="https://matrix.to/#/#vieb:matrix.org" target="_blank">
-                    <img src="https://img.shields.io/static/v1?label=matrix&message=space&color=eeeeee&logo=matrix&style=flat-square">
+                    <img alt="matrix space" src="https://img.shields.io/static/v1?label=matrix&message=space&color=eeeeee&logo=matrix&style=flat-square">
                 </a>
                 <a href="https://matrix.to/#/#vieb-announcements:matrix.org" target="_blank">
-                    <img src="https://img.shields.io/static/v1?label=matrix&message=announcements&color=eeeeee&logo=matrix&style=flat-square">
+                    <img alt="matrix announcements" src="https://img.shields.io/static/v1?label=matrix&message=announcements&color=eeeeee&logo=matrix&style=flat-square">
                 </a>
                 <a href="https://matrix.to/#/#vieb-general:matrix.org" target="_blank">
-                    <img src="https://img.shields.io/static/v1?label=matrix&message=general&color=eeeeee&logo=matrix&style=flat-square">
+                    <img alt="matrix general" src="https://img.shields.io/static/v1?label=matrix&message=general&color=eeeeee&logo=matrix&style=flat-square">
                 </a>
             </div>
             <div>
                 <a href="https://reddit.com/r/vieb" target="_blank">
-                    <img src="https://img.shields.io/reddit/subreddit-subscribers/vieb?style=social">
+                    <img alt="reddit" src="https://img.shields.io/reddit/subreddit-subscribers/vieb?style=social">
                 </a>
                 <a href="https://t.me/vieb_announcements" target="_blank">
-                    <img src="https://img.shields.io/static/v1?label=telegram&message=announcements&color=26A5E4&logo=telegram&style=flat-square">
+                    <img alt="telegram announcements" src="https://img.shields.io/static/v1?label=telegram&message=announcements&color=26A5E4&logo=telegram&style=flat-square">
                 </a>
                 <a href="https://t.me/vieb_general" target="_blank">
-                    <img src="https://img.shields.io/static/v1?label=telegram&message=general&color=26A5E4&logo=telegram&style=flat-square">
+                    <img alt="telegram general" src="https://img.shields.io/static/v1?label=telegram&message=general&color=26A5E4&logo=telegram&style=flat-square">
                 </a>
             </div>
         </footer>
