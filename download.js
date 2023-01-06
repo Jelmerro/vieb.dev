@@ -45,17 +45,7 @@ const releasesList = [
         "options": [
             {"name": "Deb x64", "url": "vieb_{}_amd64.deb"},
             {"name": "Deb arm64", "url": "vieb_{}_arm64.deb"},
-            {"name": "Snap x64", "url": "vieb_{}_amd64.snap"},
-            {
-                "name": "APT repository",
-                "cmd": [
-                    "sudo apt add-repository \"deb [trusted=yes] https://jelmerro.nl/debs /\"",
-                    "sudo apt update",
-                    "sudo apt install vieb"
-                ],
-                "note": "Some distributions use `add-apt-repository`"
-                    + " instead of `apt add-repository`"
-            }
+            {"name": "Snap x64", "url": "vieb_{}_amd64.snap"}
         ]
     },
     {
@@ -161,7 +151,7 @@ const addLinks = () => {
     thirdParty.setAttribute("target", "_blank")
     const thirdPartyImg = document.createElement("img")
     thirdPartyImg.src = "https://repology.org/badge/vertical-allrepos/vieb.svg"
-        + `?minversion=${latestRelease}`
+        + `?minversion=${latestRelease}&exclude_unsupported=1`
     thirdPartyImg.setAttribute("alt", "Third-party Vieb releases table")
     thirdParty.append(thirdPartyImg)
     container.append(thirdParty)
