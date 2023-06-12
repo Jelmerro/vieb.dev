@@ -49,8 +49,8 @@
             </ul>
             <h2>Free</h2>
             <ul>
-                <li>Free and open source code, fork and contribute on <a href="https://github.com/Jelmerro/Vieb" target="_blank">github</a></li>
-                <li>Discuss or suggest features on <a href="https://github.com/Jelmerro/Vieb" target="_blank">github</a> or <a href="https://reddit.com/r/vieb" target="_blank">reddit</a></li>
+                <li>Free and open source code, fork and contribute on the <a href="https://github.com/Jelmerro/Vieb" target="_blank">github repository</a></li>
+                <li>Discuss or suggest features on <a href="https://github.com/Jelmerro/Vieb/discussions" target="_blank">github discussions</a></li>
                 <li>Make your own builds using clear instructions included in the readme</li>
             </ul>
             <h2>Local first</h2>
@@ -225,9 +225,6 @@
                 </a>
             </div>
             <div>
-                <a href="https://reddit.com/r/vieb" target="_blank">
-                    <img alt="reddit" src="https://img.shields.io/reddit/subreddit-subscribers/vieb?style=social">
-                </a>
                 <a href="https://t.me/vieb_announcements" target="_blank">
                     <img alt="telegram announcements" src="https://img.shields.io/static/v1?label=telegram&message=announcements&color=26A5E4&logo=telegram&style=flat-square">
                 </a>
