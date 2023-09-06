@@ -15,15 +15,15 @@ const releasesList = [
             {"name": "Portable x64 (exe)", "url": "Vieb.{}.exe"},
             {"name": "Portable x64 (zip)", "url": "Vieb-{}-win.zip"},
             {"name": "Portable ARM64 (zip)", "url": "Vieb-{}-arm64-win.zip"},
-            {"name": "Chocolatey", "cmd": "choco install vieb"},
+            {"cmd": "choco install vieb", "name": "Chocolatey"},
             {
-                "name": "Scoop",
                 "cmd": [
                     "scoop bucket add extras",
                     "scoop install vieb"
-                ]
+                ],
+                "name": "Scoop"
             },
-            {"name": "Winget", "cmd": "winget  install vieb"}
+            {"cmd": "winget  install vieb", "name": "Winget"}
         ]
     },
     {
@@ -32,11 +32,11 @@ const releasesList = [
             {"name": "RPM x64", "url": "vieb-{}.x86_64.rpm"},
             {"name": "RPM arm64", "url": "vieb-{}.aarch64.rpm"},
             {
-                "name": "DNF repository",
                 "cmd": [
                     "sudo dnf config-manager --add-repo https://jelmerro.nl/fedora/jelmerro.repo",
                     "sudo dnf install vieb"
-                ]
+                ],
+                "name": "DNF repository"
             }
         ]
     },
@@ -54,8 +54,8 @@ const releasesList = [
             {"name": "Pacman x64", "url": "vieb-{}.pacman"},
             {"name": "Pacman arm64", "url": "vieb-{}-aarch64.pacman"},
             {
-                "name": "Arch user repository",
-                "link": "https://aur.archlinux.org/packages/vieb-bin"
+                "link": "https://aur.archlinux.org/packages/vieb-bin",
+                "name": "Arch user repository"
             }
         ]
     },
@@ -65,11 +65,11 @@ const releasesList = [
             {"name": "Unsigned x64 App", "url": "Vieb-{}-mac.zip"},
             {"name": "Unsigned Silicon App", "url": "vieb-{}-arm64-mac.zip"},
             {
-                "name": "Apps must be manually signed",
                 "link": "https://github.com/Jelmerro/Vieb/blob/master/FAQ.md#mac",
-                "linktitle": "See the FAQ"
+                "linktitle": "See the FAQ",
+                "name": "Apps must be manually signed"
             },
-            {"name": "Homebrew", "cmd": "brew install --cask vieb"}
+            {"cmd": "brew install --cask vieb", "name": "Homebrew"}
         ]
     },
     {
@@ -79,11 +79,19 @@ const releasesList = [
             {"name": "AppImage arm64", "url": "Vieb-{}-arm64.AppImage"},
             {"name": "tar.gz x64", "url": "vieb-{}.tar.gz"},
             {"name": "tar.gz arm64", "url": "vieb-{}-arm64.tar.gz"},
-            {"name": "Alpine Edge", "cmd": "apk add vieb"}
+            {"cmd": "apk add vieb", "name": "Alpine Edge"}
         ]
     }
 ]
 
+/**
+ * Add an install link to the page as a button or a link.
+ * @param {{
+ *   cmd?: string,
+ *   name: string,
+ *   url?: string
+ * }} release
+ */
 const addInstall = release => {
     if (release.url) {
         const button = document.createElement("a")
@@ -127,6 +135,9 @@ const addInstall = release => {
     return container
 }
 
+/**
+ * Add download links to the page based on release object and current version.
+ */
 const addLinks = () => {
     document.querySelector(".release-number").textContent = latestRelease
     const downloadList = document.querySelector(".download-button-list")
