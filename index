@@ -30,7 +30,7 @@
             <a href="/cheatsheet">Cheatsheet</a>
             <a href="/download">Downloads</a>
             <div class="spacer"></div>
-            <img alt="theme" id="toggle-theme" src="img/brightness.png">
+            <img alt="theme" id="toggle-theme" src="img/brightness.svg">
         </nav>
         <main>
             <img alt="icon" class="icon" src="img/icon.svg">
@@ -77,13 +77,13 @@
             <div class="action-buttons">
                 <a class="feature-button" href="/features">
                     <div>
-                        <img alt="list" src="img/text.png">
+                        <img alt="list" src="img/text.svg">
                         <span>Features</span>
                     </div>
                 </a>
                 <a class="screenshots-button" href="/screenshots">
                     <div>
-                        <img alt="picture" src="img/pic.png">
+                        <img alt="picture" src="img/pic.svg">
                         <span>Screenshots</span>
                     </div>
                 </a>
@@ -95,7 +95,7 @@
                 </a>
                 <a class="download-button" href="/download">
                     <div>
-                        <img alt="download" src="img/download.png">
+                        <img alt="download" src="img/download.svg">
                         <span>Downloads</span>
                     </div>
                 </a>

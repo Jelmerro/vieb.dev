@@ -31,7 +31,7 @@
             <a href="/cheatsheet">Cheatsheet</a>
             <a class="current" href="/download">Downloads</a>
             <div class="spacer"></div>
-            <img alt="theme" id="toggle-theme" src="img/brightness.png">
+            <img alt="theme" id="toggle-theme" src="img/brightness.svg">
         </nav>
         <main>
             <h1>Download Vieb releases</h1>

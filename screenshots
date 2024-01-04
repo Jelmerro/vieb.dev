@@ -30,7 +30,7 @@
             <a href="/cheatsheet">Cheatsheet</a>
             <a href="/download">Downloads</a>
             <div class="spacer"></div>
-            <img alt="theme" id="toggle-theme" src="img/brightness.png">
+            <img alt="theme" id="toggle-theme" src="img/brightness.svg">
         </nav>
         <main class="screenshots">
             <a href="img/1.png"><img alt="screenshot1" src="img/1.png"></a>

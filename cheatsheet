@@ -30,7 +30,7 @@
             <a class="current" href="/cheatsheet">Cheatsheet</a>
             <a href="/download">Downloads</a>
             <div class="spacer"></div>
-            <img alt="theme" id="toggle-theme" src="img/brightness.png">
+            <img alt="theme" id="toggle-theme" src="img/brightness.svg">
         </nav>
         <main>
             <h1>Vieb cheatsheet</h1>
