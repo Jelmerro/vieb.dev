@@ -33,7 +33,7 @@ const releasesList = [
             {"name": "RPM arm64", "url": "vieb-{}.aarch64.rpm"},
             {
                 "cmd": [
-                    "sudo dnf config-manager --add-repo https://jelmerro.nl/fedora/jelmerro.repo",
+                    "sudo dnf config-manager addrepo --from-repofile=https://jelmerro.nl/fedora/jelmerro.repo",
                     "sudo dnf install vieb"
                 ],
                 "name": "DNF repository"

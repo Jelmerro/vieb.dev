@@ -71,7 +71,7 @@ p {margin: .5em;padding: 0;}
 .cheatsheet img {filter: contrast(.5) invert() contrast(4) hue-rotate(180deg) saturate(4);}
 kbd {background: var(--code-background);padding: .1em;}
 .multiline {display: flex;flex-direction: column;max-width: 24em;}
-.multiline kbd {max-width: 25em;}
+.multiline kbd {max-width: 25em;overflow-wrap: anywhere;}
 /* iphone navbar */
 @media screen and (max-width: 630px) {
     nav {height: 5em;display: grid;grid-template-areas: "a b f g" "a c f g" "a d f g" "a e f g";}
