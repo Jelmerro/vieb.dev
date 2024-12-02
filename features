@@ -9,7 +9,6 @@
     <head>
         <!-- Meta tags -->
         <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html" />
         <meta http-equiv="Content-Security-Policy" content="img-src vieb.dev img.shields.io; object-src 'none'; style-src vieb.dev; script-src vieb.dev; default-src 'none'">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Information -->
@@ -116,7 +115,7 @@
                 <li>Store custom settings in a viebrc configuration file</li>
                 <li>Loaded from the Vieb data folder and from <kbd>~/.viebrc</kbd></li>
                 <li>Execute Vieb commands, such as <kbd>map</kbd>, <kbd>set</kbd>, <kbd>command</kbd> or <kbd>call</kbd></li>
-                <li>Can also be created based on the current settings by the <kbd>mkviebrc</kbd> command</kbd></li>
+                <li>Can also be created based on the current settings by the <kbd>mkviebrc</kbd> command</li>
                 <li>Example configs available offline for: Firefox, Chromium, Vimium, Tridactyl and more</li>
             </ul>
             <h2>Set command</h2>
@@ -126,41 +125,43 @@
                 <li>Support for all of Vim's operators, such as +=, -=, ^=, &amp; and ?</li>
                 <li>Add multiple arguments to the set command to read/write multiple settings at once</li>
                 <li>Reset individual settings or "all" to the Vieb default with the &amp; suffix</li>
-                <li>Reload all settings from your Viebrc with the <kbd>reload</kbd> command</kbd></li>
+                <li>Reload all settings from your Viebrc with the <kbd>reload</kbd> command</li>
             </ul>
             <h2>Vim-compatible options</h2>
             <ul>
-                <li>Many settings and commands compatible with Vim, including:</li>
-                <ul>
-                    <li><b>:buffer</b> for switching between opened pages by index or name</li>
-                    <li><b>:close</b> for closing opened pages by index or name</li>
-                    <li><b>:command</b> for making custom commands</li>
-                    <li><b>:colorscheme</b> with support for custom themes</li>
-                    <li><b>ignorecase</b> case-insensitive search</li>
-                    <li><b>incsearch</b> show search results incrementally when typing</li>
-                    <li><b>:hardcopy</b> print a hardcopy onto paper</li>
-                    <li><b>:hide</b> hide a page by name or index while splitting windows</li>
-                    <li><b>:map</b> including variants, see "Map commands" paragraph above</li>
-                    <li><b>maxmapdepth</b> see "Map commands" paragraph above</li>
-                    <li><b>:mkv</b> short for mkviebrc instead of mkvimrc</li>
-                    <li><b>mouse</b> enable or disable mouse support, on by default</li>
-                    <li><b>mousefocus</b> switch to tabs or window splits on hover</li>
-                    <li><b>:quit(all)</b> exit Vieb (or close the current page if split)</li>
-                    <li><b>:set</b> as explained in the previous "Set command" paragraph</li>
-                    <li><b>showcmd</b> show pressed keys part of long mappings</li>
-                    <li><b>smartcase</b> case-sensitive search only when using any capital letters</li>
-                    <li><b>spell</b> toggle spellchecking, on by default</li>
-                    <li><b>spelllang</b> set the list of allowed languages</li>
-                    <li><b>:split</b> open a horizontal split</li>
-                    <li><b>splitbelow</b> create splits below current</li>
-                    <li><b>splitright</b> create splits right of current</li>
-                    <li><b>timeout</b> timeout toggle for typing mappings and such</li>
-                    <li><b>timeoutlen</b> duration of said timeout</li>
-                    <li><b>:vsplit</b> open a vertical split</li>
-                    <li><b>:write</b> write a page to disk</li>
-                    <li><b>Scrolling</b> with <kbd>j</kbd>, <kbd>k</kbd>, <kbd>&lt;C-d&gt;</kbd>, <kbd>&lt;C-u&gt;</kbd> etc.</li>
-                    <li>Most if not all <kbd>&lt;C-w&gt;</kbd> mappings and related commands</li>
-                </ul>
+                <li>
+                    Many settings and commands compatible with Vim, including:
+                    <ul>
+                        <li><b>:buffer</b> for switching between opened pages by index or name</li>
+                        <li><b>:close</b> for closing opened pages by index or name</li>
+                        <li><b>:command</b> for making custom commands</li>
+                        <li><b>:colorscheme</b> with support for custom themes</li>
+                        <li><b>ignorecase</b> case-insensitive search</li>
+                        <li><b>incsearch</b> show search results incrementally when typing</li>
+                        <li><b>:hardcopy</b> print a hardcopy onto paper</li>
+                        <li><b>:hide</b> hide a page by name or index while splitting windows</li>
+                        <li><b>:map</b> including variants, see "Map commands" paragraph above</li>
+                        <li><b>maxmapdepth</b> see "Map commands" paragraph above</li>
+                        <li><b>:mkv</b> short for mkviebrc instead of mkvimrc</li>
+                        <li><b>mouse</b> enable or disable mouse support, on by default</li>
+                        <li><b>mousefocus</b> switch to tabs or window splits on hover</li>
+                        <li><b>:quit(all)</b> exit Vieb (or close the current page if split)</li>
+                        <li><b>:set</b> as explained in the previous "Set command" paragraph</li>
+                        <li><b>showcmd</b> show pressed keys part of long mappings</li>
+                        <li><b>smartcase</b> case-sensitive search only when using any capital letters</li>
+                        <li><b>spell</b> toggle spellchecking, on by default</li>
+                        <li><b>spelllang</b> set the list of allowed languages</li>
+                        <li><b>:split</b> open a horizontal split</li>
+                        <li><b>splitbelow</b> create splits below current</li>
+                        <li><b>splitright</b> create splits right of current</li>
+                        <li><b>timeout</b> timeout toggle for typing mappings and such</li>
+                        <li><b>timeoutlen</b> duration of said timeout</li>
+                        <li><b>:vsplit</b> open a vertical split</li>
+                        <li><b>:write</b> write a page to disk</li>
+                        <li><b>Scrolling</b> with <kbd>j</kbd>, <kbd>k</kbd>, <kbd>&lt;C-d&gt;</kbd>, <kbd>&lt;C-u&gt;</kbd> etc.</li>
+                        <li>Most if not all <kbd>&lt;C-w&gt;</kbd> mappings and related commands</li>
+                    </ul>
+                </li>
                 <li>Edit input fields in your favorite editor by setting the <kbd>vimcommand</kbd> option</li>
             </ul>
             <h2>Container tabs</h2>

@@ -102,8 +102,7 @@ kbd {background: var(--code-background);padding: .1em;}
     filter: invert(.8);
 }
 [data-theme="light"] .third-party-downloads img {
-    filter: contrast(.5) invert() contrast(4)
-    hue-rotate(180deg) saturate(4);
+    filter: contrast(.5) invert() contrast(4) hue-rotate(180deg) saturate(4);
 }
 [data-theme="light"] .download-button img {filter: none;}
 [data-theme="light"] .cheatsheet img {filter: none;}

@@ -78,8 +78,7 @@ const releasesList = [
             {"name": "AppImage x64", "url": "Vieb-{}.AppImage"},
             {"name": "AppImage arm64", "url": "Vieb-{}-arm64.AppImage"},
             {"name": "tar.gz x64", "url": "vieb-{}.tar.gz"},
-            {"name": "tar.gz arm64", "url": "vieb-{}-arm64.tar.gz"},
-            {"cmd": "apk add vieb", "name": "Alpine Edge"}
+            {"name": "tar.gz arm64", "url": "vieb-{}-arm64.tar.gz"}
         ]
     }
 ]
