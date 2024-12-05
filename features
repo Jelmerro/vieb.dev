@@ -48,8 +48,8 @@
             </ul>
             <h2>Free</h2>
             <ul>
-                <li>Free and open source code, fork and contribute on the <a href="https://github.com/Jelmerro/Vieb" target="_blank">github repository</a></li>
-                <li>Discuss or suggest features on <a href="https://github.com/Jelmerro/Vieb/discussions" target="_blank">github discussions</a></li>
+                <li>Free and open source code, fork and contribute on the <a rel="noreferrer" href="https://github.com/Jelmerro/Vieb" target="_blank">github repository</a></li>
+                <li>Discuss or suggest features on <a rel="noreferrer" href="https://github.com/Jelmerro/Vieb/discussions" target="_blank">github discussions</a></li>
                 <li>Make your own builds using clear instructions included in the readme</li>
             </ul>
             <h2>Local first</h2>
@@ -75,7 +75,7 @@
             <ul>
                 <li>Unified theme engine for all UI elements and built-in pages with simple CSS</li>
                 <li>Switch between dark and light themes, or create your own custom theme</li>
-                <li>Unified and consistent font and interface scaling using the <kbd>fontsize</kbd> setting</li>
+                <li>Unified and consistent font and interface scaling using the <kbd>guifontsize</kbd> setting</li>
                 <li>Remembers your zoom level per site, which can also be reset at anytime with Ctrl-0</li>
                 <li>Example configs to make Vieb work similar to other browsers such as Firefox, qutebrowser and many more</li>
                 <li>Vieb is keyboard focussed, not limited, you can use the mouse for many features you are used to from other browsers</li>
@@ -198,38 +198,38 @@
         <footer>
             <div>
                 <span>Created by</span>
-                <a href="https://jelmerro.nl" target="_blank">
+                <a rel="noreferrer" href="https://jelmerro.nl" target="_blank">
                     <img alt="homepage" src="img/jelmerro.jpg"><span>Jelmer van Arnhem</span>
                 </a>
                 <span>on</span>
-                <a href="https://github.com/Jelmerro/Vieb" target="_blank">
+                <a rel="noreferrer" href="https://github.com/Jelmerro/Vieb" target="_blank">
                     <img alt="github" src="img/github.svg"><span>Github</span>
                 </a>
                 <span>and supported on</span>
-                <a href="https://ko-fi.com/Jelmerro" target="_blank">
+                <a rel="noreferrer" href="https://ko-fi.com/Jelmerro" target="_blank">
                     <img alt="ko-fi" src="img/ko-fi.svg"><span>Ko-fi</span>
                 </a>
                 <span>and</span>
-                <a href="https://github.com/sponsors/Jelmerro" target="_blank">
+                <a rel="noreferrer" href="https://github.com/sponsors/Jelmerro" target="_blank">
                     <img alt="github" src="img/github.svg"><span>Github</span>
                 </a>
             </div>
             <div>
-                <a href="https://matrix.to/#/#vieb:matrix.org" target="_blank">
+                <a rel="noreferrer" href="https://matrix.to/#/#vieb:matrix.org" target="_blank">
                     <img alt="matrix space" src="https://img.shields.io/static/v1?label=matrix&message=space&color=eeeeee&logo=matrix&style=flat-square">
                 </a>
-                <a href="https://matrix.to/#/#vieb-announcements:matrix.org" target="_blank">
+                <a rel="noreferrer" href="https://matrix.to/#/#vieb-announcements:matrix.org" target="_blank">
                     <img alt="matrix announcements" src="https://img.shields.io/static/v1?label=matrix&message=announcements&color=eeeeee&logo=matrix&style=flat-square">
                 </a>
-                <a href="https://matrix.to/#/#vieb-general:matrix.org" target="_blank">
+                <a rel="noreferrer" href="https://matrix.to/#/#vieb-general:matrix.org" target="_blank">
                     <img alt="matrix general" src="https://img.shields.io/static/v1?label=matrix&message=general&color=eeeeee&logo=matrix&style=flat-square">
                 </a>
             </div>
             <div>
-                <a href="https://t.me/vieb_announcements" target="_blank">
+                <a rel="noreferrer" href="https://t.me/vieb_announcements" target="_blank">
                     <img alt="telegram announcements" src="https://img.shields.io/static/v1?label=telegram&message=announcements&color=26A5E4&logo=telegram&style=flat-square">
                 </a>
-                <a href="https://t.me/vieb_general" target="_blank">
+                <a rel="noreferrer" href="https://t.me/vieb_general" target="_blank">
                     <img alt="telegram general" src="https://img.shields.io/static/v1?label=telegram&message=general&color=26A5E4&logo=telegram&style=flat-square">
                 </a>
             </div>
