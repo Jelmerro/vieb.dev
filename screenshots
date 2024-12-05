@@ -18,7 +18,7 @@
         <!-- Links -->
         <link rel="icon" type="image/svg+xml" href="img/icon.svg">
         <link rel="shortcut icon" type="image/svg+xml" href="img/icon.svg">
-        <link rel="stylesheet" href="style.css" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" media="all" href="style.css">
         <script src="index.js"></script>
     </head>
     <body lang="en">
@@ -29,7 +29,7 @@
             <a href="/cheatsheet">Cheatsheet</a>
             <a href="/download">Downloads</a>
             <div class="spacer"></div>
-            <img alt="theme" id="toggle-theme" src="img/brightness.svg">
+            <img id="toggle-theme" alt="theme" src="img/brightness.svg">
         </nav>
         <main class="screenshots">
             <a href="img/1.png"><img alt="screenshot1" src="img/1.png"></a>
@@ -44,38 +44,38 @@
         <footer>
             <div>
                 <span>Created by</span>
-                <a rel="noreferrer" href="https://jelmerro.nl" target="_blank">
+                <a rel="noreferrer" target="_blank" href="https://jelmerro.nl">
                     <img alt="homepage" src="img/jelmerro.jpg"><span>Jelmer van Arnhem</span>
                 </a>
                 <span>on</span>
-                <a rel="noreferrer" href="https://github.com/Jelmerro/Vieb" target="_blank">
+                <a rel="noreferrer" target="_blank" href="https://github.com/Jelmerro/Vieb">
                     <img alt="github" src="img/github.svg"><span>Github</span>
                 </a>
                 <span>and supported on</span>
-                <a rel="noreferrer" href="https://ko-fi.com/Jelmerro" target="_blank">
+                <a rel="noreferrer" target="_blank" href="https://ko-fi.com/Jelmerro">
                     <img alt="ko-fi" src="img/ko-fi.svg"><span>Ko-fi</span>
                 </a>
                 <span>and</span>
-                <a rel="noreferrer" href="https://github.com/sponsors/Jelmerro" target="_blank">
+                <a rel="noreferrer" target="_blank" href="https://github.com/sponsors/Jelmerro">
                     <img alt="github" src="img/github.svg"><span>Github</span>
                 </a>
             </div>
             <div>
-                <a rel="noreferrer" href="https://matrix.to/#/#vieb:matrix.org" target="_blank">
+                <a rel="noreferrer" target="_blank" href="https://matrix.to/#/#vieb:matrix.org">
                     <img alt="matrix space" src="https://img.shields.io/static/v1?label=matrix&message=space&color=eeeeee&logo=matrix&style=flat-square">
                 </a>
-                <a rel="noreferrer" href="https://matrix.to/#/#vieb-announcements:matrix.org" target="_blank">
+                <a rel="noreferrer" target="_blank" href="https://matrix.to/#/#vieb-announcements:matrix.org">
                     <img alt="matrix announcements" src="https://img.shields.io/static/v1?label=matrix&message=announcements&color=eeeeee&logo=matrix&style=flat-square">
                 </a>
-                <a rel="noreferrer" href="https://matrix.to/#/#vieb-general:matrix.org" target="_blank">
+                <a rel="noreferrer" target="_blank" href="https://matrix.to/#/#vieb-general:matrix.org">
                     <img alt="matrix general" src="https://img.shields.io/static/v1?label=matrix&message=general&color=eeeeee&logo=matrix&style=flat-square">
                 </a>
             </div>
             <div>
-                <a rel="noreferrer" href="https://t.me/vieb_announcements" target="_blank">
+                <a rel="noreferrer" target="_blank" href="https://t.me/vieb_announcements">
                     <img alt="telegram announcements" src="https://img.shields.io/static/v1?label=telegram&message=announcements&color=26A5E4&logo=telegram&style=flat-square">
                 </a>
-                <a rel="noreferrer" href="https://t.me/vieb_general" target="_blank">
+                <a rel="noreferrer" target="_blank" href="https://t.me/vieb_general">
                     <img alt="telegram general" src="https://img.shields.io/static/v1?label=telegram&message=general&color=26A5E4&logo=telegram&style=flat-square">
                 </a>
             </div>
