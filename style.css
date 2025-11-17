@@ -45,6 +45,8 @@ a:hover {text-decoration: underline;}
 footer {position: fixed;bottom: 0;left: 0;width: 100%;background-color: var(--menu-background);min-height: 2.5em;display: flex;flex-direction: column;padding: .5em 0 1em 0;}
 footer div {margin: auto;flex-wrap: wrap;justify-content: center;}
 footer * {display: flex;margin: auto .15em;}
+footer img {margin: 0;}
+footer a {margin: .15em;}
 footer div:first-child img {height: 1.5em;width: 1.5em;}
 p {margin: .5em;padding: 0;}
 /* pages */
