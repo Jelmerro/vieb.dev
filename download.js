@@ -23,7 +23,7 @@ const releasesList = [
                 ],
                 "name": "Scoop"
             },
-            {"cmd": "winget  install vieb", "name": "Winget"}
+            {"cmd": ["winget install --id=Jelmerro.Vieb -e"], "name": "Winget"}
         ]
     },
     {
@@ -32,11 +32,8 @@ const releasesList = [
             {"name": "RPM x64", "url": "vieb-{}.x86_64.rpm"},
             {"name": "RPM arm64", "url": "vieb-{}.aarch64.rpm"},
             {
-                "cmd": [
-                    "sudo dnf config-manager addrepo --from-repofile=https://jelmerro.nl/fedora/jelmerro.repo",
-                    "sudo dnf install vieb"
-                ],
-                "name": "DNF repository"
+                "link": "https://jelmerro.nl/fedora",
+                "name": "Jelmerro's Fedora repo"
             }
         ]
     },
@@ -55,7 +52,7 @@ const releasesList = [
             {"name": "Pacman arm64", "url": "vieb-{}-aarch64.pacman"},
             {
                 "link": "https://aur.archlinux.org/packages/vieb-bin",
-                "name": "Arch user repository"
+                "name": "AUR: vieb-bin"
             }
         ]
     },
@@ -66,8 +63,7 @@ const releasesList = [
             {"name": "Unsigned Silicon App", "url": "vieb-{}-arm64-mac.zip"},
             {
                 "link": "https://github.com/Jelmerro/Vieb/blob/master/FAQ.md#mac",
-                "linktitle": "See the FAQ",
-                "name": "Apps must be manually signed"
+                "name": "Apps must be manually signed, see FAQ"
             },
             {"cmd": "brew install --cask vieb", "name": "Homebrew"}
         ]
@@ -104,11 +100,10 @@ const addInstall = release => {
     }
     if (release.link) {
         const container = document.createElement("div")
-        container.textContent = `${release.name}: `
         container.classList.add("download-command")
         const link = document.createElement("a")
         link.href = release.link
-        link.textContent = release.linktitle ?? release.link.split("/").at(-1)
+        link.textContent = release.name ?? release.link.split("/").at(-1)
         link.target = "_blank"
         container.append(link)
         return container
