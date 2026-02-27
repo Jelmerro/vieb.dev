@@ -11,22 +11,22 @@
  */
 const toggle = () => {
     let newTheme = "light"
-    if (document.documentElement.getAttribute("data-theme") === "light") {
+    if (document.documentElement.dataset.theme === "light") {
         newTheme = "dark"
     }
-    document.documentElement.setAttribute("data-theme", newTheme)
+    document.documentElement.dataset.theme = newTheme
     localStorage.setItem("theme", newTheme)
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+globalThis.addEventListener("DOMContentLoaded", () => {
     document.getElementById("toggle-theme").addEventListener("click", toggle)
     let theme = "dark"
     if (localStorage.getItem("theme")) {
         if (localStorage.getItem("theme") === "light") {
             theme = "light"
         }
-    } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+    } else if (globalThis.matchMedia("(prefers-color-scheme: light)").matches) {
         theme = "light"
     }
-    document.documentElement.setAttribute("data-theme", theme)
+    document.documentElement.dataset.theme = theme
 })

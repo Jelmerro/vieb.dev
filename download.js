@@ -6,7 +6,7 @@
 // The brand logos, screenshots and github badges are public domain via CC0 1.0,
 // see ./LICENSE.CC0-1.0 or https://creativecommons.org/publicdomain/zero/1.0/
 
-const latestRelease = "12.6.0"
+const latestRelease = "12.7.0"
 const releasesList = [
     {
         "name": "Windows",
@@ -82,9 +82,10 @@ const releasesList = [
 /**
  * Add an install link to the page as a button or a link.
  * @param {{
- *   cmd?: string,
+ *   cmd?: string|string[],
  *   name: string,
  *   url?: string
+ *   link?: string
  * }} release
  */
 const addInstall = release => {
@@ -115,16 +116,13 @@ const addInstall = release => {
         const command = document.createElement("kbd")
         command.textContent = release.cmd
         container.append(command)
-    } else {
+    } else if (release.cmd) {
         container.classList.add("multiline")
         for (const cmd of release.cmd) {
             const command = document.createElement("kbd")
             command.textContent = cmd
             container.append(command)
         }
-    }
-    if (release.note) {
-        container.append(release.note)
     }
     return container
 }
@@ -142,7 +140,9 @@ const addLinks = () => {
         const h2 = document.createElement("h2")
         h2.textContent = release.name
         container.append(h2)
-        release.options.forEach(r => container.append(addInstall(r)))
+        for (const r of release.options) {
+            container.append(addInstall(r))
+        }
         downloadList.append(container)
     }
     const container = document.createElement("div")
@@ -163,4 +163,4 @@ const addLinks = () => {
     downloadList.append(container)
 }
 
-window.addEventListener("DOMContentLoaded", addLinks)
+globalThis.addEventListener("DOMContentLoaded", addLinks)
