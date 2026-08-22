@@ -133,6 +133,9 @@ const addInstall = release => {
 const addLinks = () => {
     document.querySelector(".release-number").textContent = latestRelease
     const downloadList = document.querySelector(".download-button-list")
+    if (!downloadList) {
+        return
+    }
     downloadList.textContent = ""
     for (const release of releasesList) {
         const container = document.createElement("div")
@@ -145,6 +148,7 @@ const addLinks = () => {
         }
         downloadList.append(container)
     }
+    // Third party release section
     const container = document.createElement("div")
     container.classList.add("os-downloads")
     const h2 = document.createElement("h2")
@@ -159,7 +163,10 @@ const addLinks = () => {
         + `?minversion=${latestRelease}&exclude_unsupported=1`
     thirdPartyImg.setAttribute("alt", "Third-party Vieb releases table")
     thirdParty.append(thirdPartyImg)
-    container.append(thirdParty)
+    const nixosLink = document.createElement("a")
+    nixosLink.href = "https://github.com/tejing1/vieb-nix"
+    nixosLink.textContent = "NixOS NUR Flake"
+    container.append(thirdParty, nixosLink)
     downloadList.append(container)
 }
 

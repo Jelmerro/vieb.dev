@@ -63,7 +63,7 @@ p {margin: .5em;padding: 0;}
 .download-button {background-color: var(--button-primary);color: var(--button-text);}
 .download-button-list {display: flex;flex-wrap: wrap;max-width: 125em;}
 .download-button-list > div {display: flex;flex-direction: column;margin: 0 auto;padding: 1em;}
-.download-command {margin: .5em 0;}
+.download-command, .os-downloads > a {margin: .5em 0;}
 .download-button-list .os-downloads {display: flex;flex-direction: column;margin: 0 auto;}
 .release-number {color: var(--text);}
 .feature-list {text-align: left;padding: 7em 2em;}
